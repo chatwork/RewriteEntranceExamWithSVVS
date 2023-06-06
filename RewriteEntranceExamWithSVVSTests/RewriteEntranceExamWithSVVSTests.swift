@@ -5,8 +5,8 @@
 //  Created by cw-ryu.nakayama on 2023/06/05.
 //
 
-import XCTest
 @testable import RewriteEntranceExamWithSVVS
+import XCTest
 
 final class RewriteEntranceExamWithSVVSTests: XCTestCase {
 
