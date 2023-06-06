@@ -16,6 +16,7 @@
 		67233F932A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F922A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests.swift */; };
 		67233F9D2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F9C2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests.swift */; };
 		67233F9F2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F9E2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITestsLaunchTests.swift */; };
+		673906E62A2F1A7D00F6E527 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673906E52A2F1A7D00F6E527 /* Me.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		67233F982A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RewriteEntranceExamWithSVVSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67233F9C2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewriteEntranceExamWithSVVSUITests.swift; sourceTree = "<group>"; };
 		67233F9E2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewriteEntranceExamWithSVVSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		673906E52A2F1A7D00F6E527 /* Me.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				67233F812A2DAFFF005FDF36 /* Main.storyboard */,
 				67233F842A2DB002005FDF36 /* Assets.xcassets */,
 				67233F862A2DB002005FDF36 /* LaunchScreen.storyboard */,
+				673906E42A2F1A4900F6E527 /* Model */,
 				67233F892A2DB002005FDF36 /* Info.plist */,
 			);
 			path = RewriteEntranceExamWithSVVS;
@@ -125,6 +128,14 @@
 				67233F9E2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITestsLaunchTests.swift */,
 			);
 			path = RewriteEntranceExamWithSVVSUITests;
+			sourceTree = "<group>";
+		};
+		673906E42A2F1A4900F6E527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				673906E52A2F1A7D00F6E527 /* Me.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67233F802A2DAFFF005FDF36 /* ViewController.swift in Sources */,
+				673906E62A2F1A7D00F6E527 /* Me.swift in Sources */,
 				67233F7C2A2DAFFF005FDF36 /* AppDelegate.swift in Sources */,
 				67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */,
 			);
