@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct MeRepository {
-    // TODO: 引数の型変えたい
+struct MeRepository: MeRepositoryProtocol {
+    // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
     func fetch(token: String) async throws -> Me {
         let url = ChatworkAPIURL.getURL
         var request = URLRequest(url: url)
