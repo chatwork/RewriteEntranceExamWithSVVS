@@ -9,8 +9,18 @@ import XCTest
 
 final class MeRepositoryTests: XCTestCase {
     // Meの返ってくることを確認できればOKとする
-    func testChatworkAPIへリクエストをするとMe型のモデルが返ってくること() async throws {
+    func testChatworkAPIへ正しいTokenでリクエストをするとMe型のモデルが返ってくること() async throws {
         let repository = MeRepository()
         try await repository.fetch(token: "input your token")
+    }
+    
+    func testChatworkAPIへ間違ったTokenでリクエストをすると例外が返ってくること() async throws {
+        let repository = MeRepository()
+        do {
+            try await repository.fetch(token: "invalid token")
+            XCTFail("期待した例外が起きませんでした")
+        } catch {
+            // catchに入れば成功のためPass
+        }
     }
 }
