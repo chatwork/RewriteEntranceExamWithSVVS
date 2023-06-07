@@ -28,8 +28,9 @@ struct MeRepository {
         
         let responseStatusCode = (response as! HTTPURLResponse).statusCode
         
+        // 200以外は早期リターン
         if responseStatusCode != 200 {
-            // 例外投げる
+            throw HTTPError.statusCodeIsNot200
         }
         
         // 仮置き
