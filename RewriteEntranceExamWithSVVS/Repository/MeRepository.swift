@@ -35,9 +35,11 @@ struct MeRepository {
         }
         
         // デコードする
-        // TODO: 例外処理
-        let decodeResult = try JSONDecoder().decode(Me.self, from: data)
-        
-        return decodeResult
+        do {
+            let decodeResult = try JSONDecoder().decode(Me.self, from: data)
+            return decodeResult
+        } catch {
+            throw APIError.failedToDecodeModel
+        }
     }
 }
