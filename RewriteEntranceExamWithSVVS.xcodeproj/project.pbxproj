@@ -25,6 +25,8 @@
 		6793FEFD2A301864005EDD9D /* HTTPHethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */; };
 		6793FEFF2A3018A5005EDD9D /* ChatworkAPIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */; };
 		6793FF002A3048AA005EDD9D /* ChatworkAPIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */; };
+		6793FF022A304F57005EDD9D /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FF012A304F57005EDD9D /* HTTPError.swift */; };
+		6793FF032A304FD1005EDD9D /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FF012A304F57005EDD9D /* HTTPError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,7 @@
 		6793FEF72A2FFEF2005EDD9D /* MeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepository.swift; sourceTree = "<group>"; };
 		6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHethod.swift; sourceTree = "<group>"; };
 		6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPIURL.swift; sourceTree = "<group>"; };
+		6793FF012A304F57005EDD9D /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,7 @@
 			children = (
 				6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */,
 				6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */,
+				6793FF012A304F57005EDD9D /* HTTPError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -336,6 +340,7 @@
 				6793FEF82A2FFEF2005EDD9D /* MeRepository.swift in Sources */,
 				6793FEFC2A30183F005EDD9D /* HTTPHethod.swift in Sources */,
 				6793FEFF2A3018A5005EDD9D /* ChatworkAPIURL.swift in Sources */,
+				6793FF022A304F57005EDD9D /* HTTPError.swift in Sources */,
 				67233F7C2A2DAFFF005FDF36 /* AppDelegate.swift in Sources */,
 				67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */,
 			);
@@ -351,6 +356,7 @@
 				6793FF002A3048AA005EDD9D /* ChatworkAPIURL.swift in Sources */,
 				6793FEF52A2FFCFE005EDD9D /* Me.swift in Sources */,
 				6793FEF92A2FFEF4005EDD9D /* MeRepository.swift in Sources */,
+				6793FF032A304FD1005EDD9D /* HTTPError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
