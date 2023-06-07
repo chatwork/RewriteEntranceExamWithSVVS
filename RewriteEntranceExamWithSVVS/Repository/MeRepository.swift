@@ -31,16 +31,13 @@ struct MeRepository {
         
         // 200以外は早期リターン
         if responseStatusCode != 200 {
-            throw HTTPError.statusCodeIsNot200
+            throw APIError.statusCodeIsNot200
         }
         
         // デコードする
         // TODO: 例外処理
         let decodeResult = try JSONDecoder().decode(Me.self, from: data)
         
-        print(decodeResult)
-        
-        // 仮置き
-        return Me(accountId: 0, roomId: 0, name: "", chatworkId: "", organizationId: 0, organizationName: "", department: "", title: "", url: "", introduction: "", mail: "", telOrganization: "", telExtension: "", telMobile: "", skype: "", facebook: "", twitter: "", avatarImageUrl: "", loginMail: "")
+        return decodeResult
     }
 }

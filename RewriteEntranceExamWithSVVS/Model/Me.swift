@@ -7,6 +7,7 @@
 
 import Foundation
 
+// GlobalStateであるMeをDecodableに準拠させるのは責務的に大丈夫なのだろうか？と心配している
 struct Me: Decodable {
     let accountId: Int
     let roomId: Int
