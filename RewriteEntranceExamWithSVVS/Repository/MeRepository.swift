@@ -22,6 +22,7 @@ struct MeRepository {
         ]
         request.allHTTPHeaderFields = headers
         
+        // リクエスト
         let (data, response) = try await URLSession.shared.data(for: request)
         
         print((response as! HTTPURLResponse).statusCode)
@@ -32,6 +33,12 @@ struct MeRepository {
         if responseStatusCode != 200 {
             throw HTTPError.statusCodeIsNot200
         }
+        
+        // デコードする
+        // TODO: 例外処理
+        let decodeResult = try JSONDecoder().decode(Me.self, from: data)
+        
+        print(decodeResult)
         
         // 仮置き
         return Me(accountId: 0, roomId: 0, name: "", chatworkId: "", organizationId: 0, organizationName: "", department: "", title: "", url: "", introduction: "", mail: "", telOrganization: "", telExtension: "", telMobile: "", skype: "", facebook: "", twitter: "", avatarImageUrl: "", loginMail: "")
