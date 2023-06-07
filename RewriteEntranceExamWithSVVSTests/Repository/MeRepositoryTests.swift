@@ -9,10 +9,8 @@ import XCTest
 
 final class MeRepositoryTests: XCTestCase {
     // Meの返ってくることを確認できればOKとする
-    func testChatworkAPIへリクエストをするとMe型のモデルが返ってくること() throws {
+    func testChatworkAPIへリクエストをするとMe型のモデルが返ってくること() async throws {
         let repository = MeRepository()
-        Task.detached {
-            XCTAssertNoThrow(try await repository.fetch())
-        }
+        try await repository.fetch(token: "input your token")
     }
 }
