@@ -24,7 +24,13 @@ struct MeRepository {
         
         let (data, response) = try await URLSession.shared.data(for: request)
         
-        print(data)
+        print((response as! HTTPURLResponse).statusCode)
+        
+        let responseStatusCode = (response as! HTTPURLResponse).statusCode
+        
+        if responseStatusCode != 200 {
+            // 例外投げる
+        }
         
         // 仮置き
         return Me(accountId: 0, roomId: 0, name: "", chatworkId: "", organizationId: 0, organizationName: "", department: "", title: "", url: "", introduction: "", mail: "", telOrganization: "", telExtension: "", telMobile: "", skype: "", facebook: "", twitter: "", avatarImageUrl: "", loginMail: "")
