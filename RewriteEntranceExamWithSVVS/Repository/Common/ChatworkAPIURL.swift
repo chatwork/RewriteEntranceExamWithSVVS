@@ -11,6 +11,6 @@ struct ChatworkAPIURL {
     static private let url = "https://api.chatwork.com/v2/me"
     
     static var getURL: URL {
-        return URL(string: url)!
+        return URL(string: url)! // swiftlint:disable:this force_unwrapping
     }
 }

@@ -15,7 +15,7 @@ struct MeRepositoryMock: MeRepositoryProtocol {
     }
     
     func fetch(token: String) async throws -> Me {
-        try? await Task.sleep(nanoseconds: 1000000)
+        try? await Task.sleep(nanoseconds: 1_000_000)
         switch desiredStatus {
         case .successFetch:
             return me
