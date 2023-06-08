@@ -14,7 +14,7 @@ struct LoginView: View {
         VStack {
             Spacer()
             InputTokenField(state: state)
-            Spacer()
+                .padding(.bottom, 24)
             LoginButton(state: state)
             Spacer()
         }
