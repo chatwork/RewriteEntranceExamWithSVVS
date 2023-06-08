@@ -22,7 +22,7 @@ struct MeRepositoryMock: MeRepositoryProtocol {
         case .throwStatusCodeIsNot200:
             throw APIError.statusCodeIsNot200
         case .throwFailedToDecodeModel:
-            throw APIError.statusCodeIsNot200
+            throw APIError.failedToDecodeModel
         }
     }
     
