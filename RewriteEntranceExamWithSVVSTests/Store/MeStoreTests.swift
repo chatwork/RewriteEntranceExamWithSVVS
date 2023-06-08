@@ -17,7 +17,7 @@ final class MeStoreTests: XCTestCase {
     
     func testMeStoreからRepositoryを経由してMeの情報を取得できる() async throws {
         // MeStoreのRepositoryをMockに差し替え
-        MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock())
+        MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .successFetch))
         
         try await MeStore.shared.fetch(token: "input your token")
         XCTAssertNotNil(MeStore.shared.value)
