@@ -16,7 +16,9 @@ struct LoginButton: View {
     
     var body: some View {
         Button {
-            
+            Task {
+                await state.onTapLoginButton()
+            }
         } label: {
             Text("ログイン")
         }

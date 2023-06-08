@@ -25,8 +25,6 @@ struct MeRepository: MeRepositoryProtocol {
         // リクエスト
         let (data, response) = try await URLSession.shared.data(for: request)
         
-        print((response as! HTTPURLResponse).statusCode)
-        
         let responseStatusCode = (response as! HTTPURLResponse).statusCode
         
         // 200以外は早期リターン
