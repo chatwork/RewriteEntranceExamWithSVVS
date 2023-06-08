@@ -18,7 +18,7 @@ final class LoginViewStateTests: XCTestCase {
     
     func test_ログイン成功時にフラグが立たない() async throws {
         let state = LoginViewState()
-        state.inputToken = "input your token"
+        state.inputToken = "inputYourToken"
         await state.onTapLoginButton()
         
         XCTAssertEqual(state.loginFailedAlertFlag, false)

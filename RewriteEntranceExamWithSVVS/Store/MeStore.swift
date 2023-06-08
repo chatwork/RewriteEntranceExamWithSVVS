@@ -15,7 +15,7 @@ final class MeStore {
     
     private var meRepository: MeRepositoryProtocol = MeRepository()
     
-    func fetch(token: String) async throws {
+    func fetch(token: ChatworkAPIToken) async throws {
         let fetchResult = try await meRepository.fetch(token: token)
         value = fetchResult
     }

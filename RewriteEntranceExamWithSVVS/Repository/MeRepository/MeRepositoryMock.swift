@@ -14,7 +14,7 @@ struct MeRepositoryMock: MeRepositoryProtocol {
         self.desiredStatus = desiredStatus
     }
     
-    func fetch(token: String) async throws -> Me {
+    func fetch(token: ChatworkAPIToken) async throws -> Me {
         try? await Task.sleep(nanoseconds: 1_000_000)
         switch desiredStatus {
         case .successFetch:

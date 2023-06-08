@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MeRepositoryProtocol {
-    func fetch(token: String) async throws -> Me
+    func fetch(token: ChatworkAPIToken) async throws -> Me
 }

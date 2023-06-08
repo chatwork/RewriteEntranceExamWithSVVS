@@ -9,7 +9,7 @@ import Foundation
 
 struct MeRepository: MeRepositoryProtocol {
     // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
-    func fetch(token: String) async throws -> Me {
+    func fetch(token: ChatworkAPIToken) async throws -> Me {
         let url = ChatworkAPIURL.getURL
         var request = URLRequest(url: url)
         
@@ -18,7 +18,7 @@ struct MeRepository: MeRepositoryProtocol {
         // 検討: 他Repositoryでも共通な気がするから切り出し候補
         let headers = [
           "accept": "application/json",
-          "x-chatworktoken": token
+          "x-chatworktoken": token.value
         ]
         request.allHTTPHeaderFields = headers
         
