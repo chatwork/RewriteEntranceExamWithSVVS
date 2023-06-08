@@ -10,6 +10,7 @@ import Foundation
 @MainActor
 final class LoginViewState: ObservableObject {
     @Published var inputToken: String = ""
+    @Published var loginFailedAlertFlag = false
     
     func onTapLoginButton() async {
         do {
@@ -19,6 +20,11 @@ final class LoginViewState: ObservableObject {
         } catch {
             // TODO: 例外のアラートなど
             print("ログイン失敗")
+            loginFailedAlertFlag = true
         }
+    }
+    
+    func onTapAlertCloseButton() {
+        loginFailedAlertFlag = false
     }
 }
