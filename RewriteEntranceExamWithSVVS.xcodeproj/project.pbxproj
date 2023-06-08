@@ -29,6 +29,8 @@
 		6793FF032A304FD1005EDD9D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FF012A304F57005EDD9D /* APIError.swift */; };
 		6799FD2D2A314ADB000FF866 /* MeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */; };
 		6799FD2F2A314B66000FF866 /* MeRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2E2A314B66000FF866 /* MeRepositoryMock.swift */; };
+		6799FD322A314F74000FF866 /* MeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD312A314F74000FF866 /* MeStoreTests.swift */; };
+		6799FD332A315139000FF866 /* MeRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2E2A314B66000FF866 /* MeRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,7 @@
 		6793FF012A304F57005EDD9D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		6799FD2E2A314B66000FF866 /* MeRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepositoryMock.swift; sourceTree = "<group>"; };
+		6799FD312A314F74000FF866 /* MeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		67233F912A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests */ = {
 			isa = PBXGroup;
 			children = (
+				6799FD302A314F44000FF866 /* Store */,
 				6793FEF22A2FFAD9005EDD9D /* Repository */,
 				67233F922A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests.swift */,
 			);
@@ -194,6 +198,14 @@
 				6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */,
 			);
 			path = MeRepository;
+			sourceTree = "<group>";
+		};
+		6799FD302A314F44000FF866 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				6799FD312A314F74000FF866 /* MeStoreTests.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,12 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				67233F932A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests.swift in Sources */,
+				6799FD332A315139000FF866 /* MeRepositoryMock.swift in Sources */,
 				6793FEF42A2FFBB1005EDD9D /* MeRepositoryTests.swift in Sources */,
 				6793FEFD2A301864005EDD9D /* HTTPHethod.swift in Sources */,
 				6793FF002A3048AA005EDD9D /* ChatworkAPIURL.swift in Sources */,
 				6793FEF52A2FFCFE005EDD9D /* Me.swift in Sources */,
 				6793FEF92A2FFEF4005EDD9D /* MeRepository.swift in Sources */,
 				6793FF032A304FD1005EDD9D /* APIError.swift in Sources */,
+				6799FD322A314F74000FF866 /* MeStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
