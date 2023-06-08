@@ -38,6 +38,36 @@
             </objects>
             <point key="canvasLocation" x="139" y="-2"/>
         </scene>
+        <!--Room List View Controller-->
+        <scene sceneID="RaF-e5-T0b">
+            <objects>
+                <viewController id="aKK-qa-31o" customClass="RoomListViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OMJ-Dk-IT9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3a-Of-K8j">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DuU-EM-sRC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S3a-Of-K8j" firstAttribute="leading" secondItem="DuU-EM-sRC" secondAttribute="leading" id="Axe-gW-N5i"/>
+                            <constraint firstItem="DuU-EM-sRC" firstAttribute="bottom" secondItem="S3a-Of-K8j" secondAttribute="bottom" id="Az8-ev-W6d"/>
+                            <constraint firstItem="DuU-EM-sRC" firstAttribute="trailing" secondItem="S3a-Of-K8j" secondAttribute="trailing" id="Gon-Ll-P1i"/>
+                            <constraint firstItem="S3a-Of-K8j" firstAttribute="top" secondItem="DuU-EM-sRC" secondAttribute="top" id="Vve-dm-Dzf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="swiftUIView" destination="S3a-Of-K8j" id="Zpi-sI-Phb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgQ-d7-quZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

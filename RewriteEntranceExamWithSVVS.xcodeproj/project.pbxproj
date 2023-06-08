@@ -40,6 +40,8 @@
 		67F86E542A3175E100F16733 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E532A3175E100F16733 /* LoginButton.swift */; };
 		67F86E582A317E2300F16733 /* LoginViewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E572A317E2300F16733 /* LoginViewStateTests.swift */; };
 		67F86E5A2A317F4000F16733 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E512A3173F500F16733 /* LoginViewState.swift */; };
+		67F86E5E2A3182B500F16733 /* RoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E5D2A3182B500F16733 /* RoomListViewController.swift */; };
+		67F86E602A31831F00F16733 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E5F2A31831F00F16733 /* RoomListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		67F86E512A3173F500F16733 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		67F86E532A3175E100F16733 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		67F86E572A317E2300F16733 /* LoginViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewStateTests.swift; sourceTree = "<group>"; };
+		67F86E5D2A3182B500F16733 /* RoomListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewController.swift; sourceTree = "<group>"; };
+		67F86E5F2A31831F00F16733 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,10 +240,8 @@
 		67F86E4A2A31619600F16733 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				67233F7F2A2DAFFF005FDF36 /* LoginViewController.swift */,
-				67F86E4B2A3161A800F16733 /* LoginView.swift */,
-				67F86E4D2A31723700F16733 /* Component */,
-				67F86E502A3173E000F16733 /* ViewState */,
+				67F86E5B2A31827400F16733 /* LoginView */,
+				67F86E5C2A31828700F16733 /* RoomListView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +269,26 @@
 				67F86E572A317E2300F16733 /* LoginViewStateTests.swift */,
 			);
 			path = ViewState;
+			sourceTree = "<group>";
+		};
+		67F86E5B2A31827400F16733 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				67233F7F2A2DAFFF005FDF36 /* LoginViewController.swift */,
+				67F86E4B2A3161A800F16733 /* LoginView.swift */,
+				67F86E4D2A31723700F16733 /* Component */,
+				67F86E502A3173E000F16733 /* ViewState */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		67F86E5C2A31828700F16733 /* RoomListView */ = {
+			isa = PBXGroup;
+			children = (
+				67F86E5D2A3182B500F16733 /* RoomListViewController.swift */,
+				67F86E5F2A31831F00F16733 /* RoomListView.swift */,
+			);
+			path = RoomListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,12 +453,14 @@
 				67F86E4C2A3161A800F16733 /* LoginView.swift in Sources */,
 				67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */,
 				67F86E522A3173F500F16733 /* LoginViewState.swift in Sources */,
+				67F86E602A31831F00F16733 /* RoomListView.swift in Sources */,
 				6793FF022A304F57005EDD9D /* APIError.swift in Sources */,
 				67F86E542A3175E100F16733 /* LoginButton.swift in Sources */,
 				67233F7C2A2DAFFF005FDF36 /* AppDelegate.swift in Sources */,
 				6799FD362A3154C6000FF866 /* MeStore.swift in Sources */,
 				67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */,
 				6799FD2D2A314ADB000FF866 /* MeRepositoryProtocol.swift in Sources */,
+				67F86E5E2A3182B500F16733 /* RoomListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
