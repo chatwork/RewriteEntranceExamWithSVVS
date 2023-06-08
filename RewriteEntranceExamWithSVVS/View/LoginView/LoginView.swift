@@ -9,6 +9,11 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject private var state: LoginViewState = .init()
+    private let rootVC: UIViewController
+    
+    init(rootVC: UIViewController) {
+        self.rootVC = rootVC
+    }
     
     var body: some View {
         VStack {
@@ -26,11 +31,15 @@ struct LoginView: View {
             }
 
         }
+        .onAppear {
+            // これは大丈夫なのか...🤔 汚い & ViewStateのメソッドに引数持たせてる
+            state.setRootVC(rootVC: rootVC)
+        }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(rootVC: UIViewController())
     }
 }

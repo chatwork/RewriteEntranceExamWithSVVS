@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login_view" id="BYZ-38-t0r" customClass="LoginViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
         <!--Room List View Controller-->
         <scene sceneID="RaF-e5-T0b">
             <objects>
-                <viewController id="aKK-qa-31o" customClass="RoomListViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="room_list_view" id="aKK-qa-31o" customClass="RoomListViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMJ-Dk-IT9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

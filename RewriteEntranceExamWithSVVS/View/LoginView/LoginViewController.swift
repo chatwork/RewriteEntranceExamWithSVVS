@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     // SwiftUIViewの埋め込み
     private func embedSwiftUIView() {
-        let viewController: UIHostingController<LoginView> = UIHostingController(rootView: LoginView())
+        let viewController: UIHostingController<LoginView> = UIHostingController(rootView: LoginView(rootVC: self))
         addChild(viewController)
 
         swiftUIView.addSubview(viewController.view)
