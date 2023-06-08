@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject private var state: LoginViewState = .init()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            InputTokenField(state: state)
+            Spacer()
+            LoginButton(state: state)
+            Spacer()
+        }
     }
 }
 

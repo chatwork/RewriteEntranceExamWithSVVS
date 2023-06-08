@@ -16,14 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fur-wY-M3t">
-                                <rect key="frame" x="76" y="362" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fur-wY-M3t">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fur-wY-M3t" secondAttribute="trailing" id="88g-w3-T2z"/>
+                            <constraint firstItem="fur-wY-M3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KJN-ta-mTl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fur-wY-M3t" secondAttribute="bottom" id="ZiA-5Z-uqS"/>
+                            <constraint firstItem="fur-wY-M3t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tuR-L0-zPT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="swiftUIView" destination="fur-wY-M3t" id="YOv-9N-QSc"/>
