@@ -5,8 +5,8 @@
 //  Created by cw-ryu.nakayama on 2023/06/08.
 //
 
-import UIKit
 import SwiftUI
+import UIKit
 
 class RoomListViewController: UIViewController {
 
@@ -16,7 +16,7 @@ class RoomListViewController: UIViewController {
         embedSwiftUIView()
     }
     
-    @IBOutlet weak var swiftUIView: UIView!
+    @IBOutlet private weak var swiftUIView: UIView!
     
     // SwiftUIViewの埋め込み
     private func embedSwiftUIView() {
