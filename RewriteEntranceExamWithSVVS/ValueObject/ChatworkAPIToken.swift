@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatworkAPIToken {
+struct ChatworkAPIToken: Codable {
     let value: String
     
     init(value: String) throws {
