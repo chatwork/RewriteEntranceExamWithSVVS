@@ -25,6 +25,7 @@ final class ChatworkAPITokenStore {
     }
     
     func delete() {
-        
+        repository.delete()
+        load()
     }
 }
