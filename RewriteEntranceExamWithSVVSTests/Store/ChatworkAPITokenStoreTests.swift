@@ -20,4 +20,11 @@ final class ChatworkAPITokenStoreTests: XCTestCase {
         ChatworkAPITokenStore.shared.load()
         XCTAssertNil(ChatworkAPITokenStore.shared.value)
     }
+    
+    func test_Keychainに値をセットするとStoreの値もセットした値になる() throws {
+        let apiToken = try ChatworkAPIToken(value: "token1234")
+        ChatworkAPITokenStore.shared.save(tokenData: apiToken)
+        
+        XCTAssertEqual(ChatworkAPITokenStore.shared.value, apiToken)
+    }
 }

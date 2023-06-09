@@ -10,7 +10,6 @@ import Foundation
 struct ChatworkAPITokenRepository {
     private let key = "ChatworkAPIToken"
     
-    // TODO: ChatworkAPIToken型を引数で受け取るように修正
     func save(tokenData: ChatworkAPIToken) {
         let encoder = JSONEncoder()
         
