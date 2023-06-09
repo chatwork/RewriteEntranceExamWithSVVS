@@ -7,6 +7,7 @@
 
 import XCTest
 
+@MainActor
 final class ChatworkAPITokenStoreTests: XCTestCase {
 
     override func setUp() {
