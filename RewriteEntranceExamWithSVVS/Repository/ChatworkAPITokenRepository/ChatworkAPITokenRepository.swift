@@ -17,9 +17,9 @@ struct ChatworkAPITokenRepository {
         do {
             let encoded = try encoder.encode(tokenData)
             let query: [String: Any] = [
-                kSecClass as String: kSecClassGenericPassword,
+                kSecClass       as String: kSecClassGenericPassword,
                 kSecAttrService as String: key,
-                kSecValueData as String: encoded
+                kSecValueData   as String: encoded
             ]
             
             let status = SecItemCopyMatching(query as CFDictionary, nil)
@@ -36,6 +36,7 @@ struct ChatworkAPITokenRepository {
         }
     }
     
+    // 取得失敗時に例外を返すことも考えたが、初回ログインなどTokenがないことでデフォルトの場合もある(= 例外ではない)と考えoptionalにした
     func load() -> ChatworkAPIToken? {
         let query: [String: Any] = [
                 kSecClass              as String: kSecClassGenericPassword,
@@ -65,5 +66,15 @@ struct ChatworkAPITokenRepository {
                 print("該当なし")
             }
             return nil
+    }
+    
+    func delete() {
+        let query: [String: Any] = [
+            kSecAttrService as String: key,
+            kSecClass       as String: kSecClassGenericPassword,
+        ]
+        
+        let status = SecItemDelete(query as CFDictionary)
+//        return status == noErr
     }
 }
