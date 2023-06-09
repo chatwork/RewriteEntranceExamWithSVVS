@@ -13,25 +13,21 @@ struct ChatworkAPITokenRepository {
     func save(tokenData: ChatworkAPIToken) {
         let encoder = JSONEncoder()
         
-        do {
-            let encoded = try encoder.encode(tokenData)
-            let query: [String: Any] = [
-                kSecClass       as String: kSecClassGenericPassword,
-                kSecAttrService as String: key,
-                kSecValueData   as String: encoded
-            ]
-            
-            let status = SecItemCopyMatching(query as CFDictionary, nil)
-            switch status {
-            case errSecItemNotFound:
-                SecItemAdd(query as CFDictionary, nil)
-            case errSecSuccess:
-                SecItemUpdate(query as CFDictionary, [kSecValueData as String: encoded] as CFDictionary)
-            default:
-                debugPrint("失敗\(status)")
-            }
-        } catch {
-            // TODO: 例外処理
+        let encoded = try? encoder.encode(tokenData)
+        let query: [String: Any] = [
+            kSecClass       as String: kSecClassGenericPassword,
+            kSecAttrService as String: key,
+            kSecValueData   as String: encoded! // swiftlint:disable:this force_unwrapping
+        ]
+        
+        let status = SecItemCopyMatching(query as CFDictionary, nil)
+        switch status {
+        case errSecItemNotFound:
+            SecItemAdd(query as CFDictionary, nil)
+        case errSecSuccess:
+            SecItemUpdate(query as CFDictionary, [kSecValueData as String: encoded] as CFDictionary)
+        default:
+            debugPrint("失敗\(status)")
         }
     }
     
@@ -70,10 +66,9 @@ struct ChatworkAPITokenRepository {
     func delete() {
         let query: [String: Any] = [
             kSecAttrService as String: key,
-            kSecClass       as String: kSecClassGenericPassword,
+            kSecClass       as String: kSecClassGenericPassword
         ]
         
-        let status = SecItemDelete(query as CFDictionary)
-//        return status == noErr
+        _ = SecItemDelete(query as CFDictionary)
     }
 }
