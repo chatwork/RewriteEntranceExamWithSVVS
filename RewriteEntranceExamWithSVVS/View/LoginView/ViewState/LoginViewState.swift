@@ -5,6 +5,7 @@
 //  Created by cw-ryu.nakayama on 2023/06/08.
 //
 
+import Combine
 import Foundation
 import UIKit
 
@@ -40,5 +41,11 @@ final class LoginViewState: ObservableObject {
     // アラート表示フラグを消す
     func onTapAlertCloseButton() {
         loginFailedAlertFlag = false
+    }
+    
+    // 画面遷移のsendをするためのPublisher
+    private let toRoomListViewSubject = PassthroughSubject<Void, Never>()
+    var toRoomListView: AnyPublisher<Void, Never> {
+        toRoomListViewSubject.eraseToAnyPublisher()
     }
 }
