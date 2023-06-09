@@ -20,11 +20,22 @@ final class LoginViewState: ObservableObject {
             let valueObjectToken = try ChatworkAPIToken(value: inputToken)
             // リクエストの依頼・失敗は例外出す
             try await MeStore.shared.fetch(token: valueObjectToken)
+            // 成功だからトークンをKeychainに保存する
+            ChatworkAPITokenStore.shared.save(tokenData: valueObjectToken)
             // 例外起きなければ画面遷移
             toRoomListViewSubject.send()
         } catch {
             // アラート表示フラグを立てる
             loginFailedAlertFlag = true
+        }
+    }
+    
+    func checkFirstLogin() {
+        let savedToken = ChatworkAPITokenStore.shared.value
+        // 初回ログイン出ないなら遷移させる
+        if savedToken != nil {
+            toRoomListViewSubject.send()
+            return
         }
     }
     

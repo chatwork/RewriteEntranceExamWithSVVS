@@ -25,6 +25,11 @@ class LoginViewController: UIViewController {
         
         embedSwiftUIView()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        viewState.checkFirstLogin()
+    }
 
     @IBOutlet private weak var swiftUIView: UIView!
     
