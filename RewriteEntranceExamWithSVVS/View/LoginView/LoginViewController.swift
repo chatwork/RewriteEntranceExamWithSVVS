@@ -5,13 +5,24 @@
 //  Created by cw-ryu.nakayama on 2023/06/05.
 //
 
+import Combine
 import SwiftUI
 import UIKit
 
 class LoginViewController: UIViewController {
+    private let viewState: LoginViewState = .init()
+    private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewState.toRoomListView.sink { [weak self] _ in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "room_list_view")
+            self?.present(nextVC, animated: false, completion: nil)
+        }
+        .store(in: &cancellables)
+        
         embedSwiftUIView()
     }
 
@@ -19,7 +30,7 @@ class LoginViewController: UIViewController {
     
     // SwiftUIViewの埋め込み
     private func embedSwiftUIView() {
-        let viewController: UIHostingController<LoginView> = UIHostingController(rootView: LoginView(rootVC: self))
+        let viewController: UIHostingController<LoginView> = UIHostingController(rootView: LoginView(state: viewState))
         addChild(viewController)
 
         swiftUIView.addSubview(viewController.view)

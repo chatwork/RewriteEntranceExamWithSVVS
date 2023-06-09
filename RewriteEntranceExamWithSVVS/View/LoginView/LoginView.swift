@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject private var state: LoginViewState = .init()
-    private let rootVC: UIViewController
+    @StateObject private var state: LoginViewState
     
-    init(rootVC: UIViewController) {
-        self.rootVC = rootVC
+    init(state: LoginViewState) {
+        self._state = .init(wrappedValue: state)
     }
     
     var body: some View {
@@ -31,15 +30,11 @@ struct LoginView: View {
             }
 
         }
-        .onAppear {
-            // これは大丈夫なのか...🤔 汚い & ViewStateのメソッドに引数持たせてる
-            state.setRootVC(rootVC: rootVC)
-        }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(rootVC: UIViewController())
+        LoginView(state: LoginViewState())
     }
 }
