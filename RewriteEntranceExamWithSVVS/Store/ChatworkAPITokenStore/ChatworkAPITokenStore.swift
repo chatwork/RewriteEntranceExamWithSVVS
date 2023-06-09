@@ -13,7 +13,14 @@ final class ChatworkAPITokenStore {
     
     @Published private(set) var value: ChatworkAPIToken?
     
+    let repository = ChatworkAPITokenRepository()
+    
     func load() {
-        
+        value = repository.load()
+    }
+    
+    func save(tokenData: ChatworkAPIToken) {
+        repository.save(tokenData: tokenData)
+        load()
     }
 }
