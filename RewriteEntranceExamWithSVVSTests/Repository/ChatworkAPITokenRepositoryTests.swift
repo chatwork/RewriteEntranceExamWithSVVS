@@ -21,13 +21,12 @@ final class ChatworkAPITokenRepositoryTests: XCTestCase {
         XCTAssertNil(loadResult)
     }
     
-//    func test_Kyechainに保存を行った後に取得を行うと_保存した値が返ってくること() throws {
-//        let repository = ChatworkAPITokenRepository()
-//        let apiToken = try ChatworkAPIToken(value: "token1234")
-//        repository.save(tokenData: apiToken)
-//        let loadResult = repository.load()
-//
-////        XCTAssertEqual(loadResult, apiToken)
-//        
-//    }
+    func test_Kyechainに保存を行った後に取得を行うと_保存した値が返ってくること() throws {
+        let repository = ChatworkAPITokenRepository()
+        let apiToken = try ChatworkAPIToken(value: "token1234")
+        repository.save(tokenData: apiToken)
+        let loadResult = repository.load()
+
+        XCTAssertEqual(loadResult, apiToken)
+    }
 }

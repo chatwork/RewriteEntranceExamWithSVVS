@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatworkAPIToken: Codable {
+struct ChatworkAPIToken: Codable, Equatable {
     let value: String
     
     init(value: String) throws {
@@ -20,5 +20,9 @@ struct ChatworkAPIToken: Codable {
         func isSingleByteAlphanumericCharacters(value: String) -> Bool {
             value.range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil && !value.isEmpty
         }
+    }
+    
+    static func == (lhs: ChatworkAPIToken, rhs: ChatworkAPIToken) -> Bool {
+        return lhs.value == rhs.value
     }
 }
