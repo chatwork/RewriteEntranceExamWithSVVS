@@ -25,10 +25,10 @@
 		6793FEF52A2FFCFE005EDD9D /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673906E52A2F1A7D00F6E527 /* Me.swift */; };
 		6793FEF82A2FFEF2005EDD9D /* MeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEF72A2FFEF2005EDD9D /* MeRepository.swift */; };
 		6793FEF92A2FFEF4005EDD9D /* MeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEF72A2FFEF2005EDD9D /* MeRepository.swift */; };
-		6793FEFC2A30183F005EDD9D /* HTTPHethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */; };
-		6793FEFD2A301864005EDD9D /* HTTPHethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */; };
-		6793FEFF2A3018A5005EDD9D /* ChatworkAPIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */; };
-		6793FF002A3048AA005EDD9D /* ChatworkAPIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */; };
+		6793FEFC2A30183F005EDD9D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFB2A30183F005EDD9D /* HTTPMethod.swift */; };
+		6793FEFD2A301864005EDD9D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFB2A30183F005EDD9D /* HTTPMethod.swift */; };
+		6793FEFF2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift */; };
+		6793FF002A3048AA005EDD9D /* ChatworkAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FEFE2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift */; };
 		6793FF022A304F57005EDD9D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FF012A304F57005EDD9D /* APIError.swift */; };
 		6793FF032A304FD1005EDD9D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6793FF012A304F57005EDD9D /* APIError.swift */; };
 		6799FD2D2A314ADB000FF866 /* MeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */; };
@@ -40,6 +40,9 @@
 		6799FD382A31594F000FF866 /* MeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */; };
 		67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
 		67D7BD4F2A32F28B002F684A /* RoomListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */; };
+		67D7BD502A32F514002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
+		67D7BD532A3307C0002F684A /* RoomListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD522A3307C0002F684A /* RoomListRepository.swift */; };
+		67D7BD542A330B1A002F684A /* RoomListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD522A3307C0002F684A /* RoomListRepository.swift */; };
 		67F86E4C2A3161A800F16733 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4B2A3161A800F16733 /* LoginView.swift */; };
 		67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4E2A31724700F16733 /* InputTokenField.swift */; };
 		67F86E522A3173F500F16733 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E512A3173F500F16733 /* LoginViewState.swift */; };
@@ -92,8 +95,8 @@
 		677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStore.swift; sourceTree = "<group>"; };
 		6793FEF32A2FFBB1005EDD9D /* MeRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepositoryTests.swift; sourceTree = "<group>"; };
 		6793FEF72A2FFEF2005EDD9D /* MeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepository.swift; sourceTree = "<group>"; };
-		6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHethod.swift; sourceTree = "<group>"; };
-		6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPIURL.swift; sourceTree = "<group>"; };
+		6793FEFB2A30183F005EDD9D /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		6793FEFE2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPIEndpoint.swift; sourceTree = "<group>"; };
 		6793FF012A304F57005EDD9D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6799FD2C2A314ADB000FF866 /* MeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		6799FD2E2A314B66000FF866 /* MeRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeRepositoryMock.swift; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		6799FD352A3154C6000FF866 /* MeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStore.swift; sourceTree = "<group>"; };
 		67D7BD4C2A32EF08002F684A /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListRepositoryTests.swift; sourceTree = "<group>"; };
+		67D7BD522A3307C0002F684A /* RoomListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListRepository.swift; sourceTree = "<group>"; };
 		67F86E4B2A3161A800F16733 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		67F86E4E2A31724700F16733 /* InputTokenField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTokenField.swift; sourceTree = "<group>"; };
 		67F86E512A3173F500F16733 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
@@ -246,6 +250,7 @@
 				6793FEFA2A301811005EDD9D /* Common */,
 				6799FD2B2A314AC7000FF866 /* MeRepository */,
 				67F86E6D2A31A5A600F16733 /* ChatworkAPITokenRepository */,
+				67D7BD512A3307A6002F684A /* RoomListRepository */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -253,8 +258,8 @@
 		6793FEFA2A301811005EDD9D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6793FEFB2A30183F005EDD9D /* HTTPHethod.swift */,
-				6793FEFE2A3018A5005EDD9D /* ChatworkAPIURL.swift */,
+				6793FEFB2A30183F005EDD9D /* HTTPMethod.swift */,
+				6793FEFE2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift */,
 				6793FF012A304F57005EDD9D /* APIError.swift */,
 			);
 			path = Common;
@@ -303,6 +308,14 @@
 				67D7BD4C2A32EF08002F684A /* RoomList.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		67D7BD512A3307A6002F684A /* RoomListRepository */ = {
+			isa = PBXGroup;
+			children = (
+				67D7BD522A3307C0002F684A /* RoomListRepository.swift */,
+			);
+			path = RoomListRepository;
 			sourceTree = "<group>";
 		};
 		67F86E4A2A31619600F16733 /* View */ = {
@@ -549,9 +562,10 @@
 				67233F802A2DAFFF005FDF36 /* LoginViewController.swift in Sources */,
 				673906E62A2F1A7D00F6E527 /* Me.swift in Sources */,
 				6793FEF82A2FFEF2005EDD9D /* MeRepository.swift in Sources */,
+				67D7BD532A3307C0002F684A /* RoomListRepository.swift in Sources */,
 				6799FD2F2A314B66000FF866 /* MeRepositoryMock.swift in Sources */,
-				6793FEFC2A30183F005EDD9D /* HTTPHethod.swift in Sources */,
-				6793FEFF2A3018A5005EDD9D /* ChatworkAPIURL.swift in Sources */,
+				6793FEFC2A30183F005EDD9D /* HTTPMethod.swift in Sources */,
+				6793FEFF2A3018A5005EDD9D /* ChatworkAPIEndpoint.swift in Sources */,
 				67F86E4C2A3161A800F16733 /* LoginView.swift in Sources */,
 				67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */,
 				67F86E522A3173F500F16733 /* LoginViewState.swift in Sources */,
@@ -579,11 +593,13 @@
 				67F86E672A319E4B00F16733 /* ChatworkAPITokenTests.swift in Sources */,
 				67F86E5A2A317F4000F16733 /* LoginViewState.swift in Sources */,
 				6799FD332A315139000FF866 /* MeRepositoryMock.swift in Sources */,
+				67D7BD542A330B1A002F684A /* RoomListRepository.swift in Sources */,
 				6793FEF42A2FFBB1005EDD9D /* MeRepositoryTests.swift in Sources */,
 				677CFDC42A32ABB9004B7195 /* ChatworkAPITokenStore.swift in Sources */,
 				677CFDBC2A32A0EA004B7195 /* ChatworkAPITokenRepository.swift in Sources */,
-				6793FEFD2A301864005EDD9D /* HTTPHethod.swift in Sources */,
-				6793FF002A3048AA005EDD9D /* ChatworkAPIURL.swift in Sources */,
+				67D7BD502A32F514002F684A /* RoomList.swift in Sources */,
+				6793FEFD2A301864005EDD9D /* HTTPMethod.swift in Sources */,
+				6793FF002A3048AA005EDD9D /* ChatworkAPIEndpoint.swift in Sources */,
 				6799FD372A31552F000FF866 /* MeStore.swift in Sources */,
 				6793FEF52A2FFCFE005EDD9D /* Me.swift in Sources */,
 				6793FEF92A2FFEF4005EDD9D /* MeRepository.swift in Sources */,

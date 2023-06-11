@@ -1,28 +1,25 @@
 //
-//  MeRepository.swift
+//  RoomListRepository.swift
 //  RewriteEntranceExamWithSVVS
 //
-//  Created by cw-ryu.nakayama on 2023/06/07.
+//  Created by cw-ryu.nakayama on 2023/06/09.
 //
 
 import Foundation
 
-struct MeRepository: MeRepositoryProtocol {
-    // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
-    func fetch(token: ChatworkAPIToken) async throws -> Me {
-        let url = ChatworkAPIEndpoint.getMeEndpoint
+struct RoomListRepository {
+    func fetch(token: ChatworkAPIToken) async throws -> RoomList {
+        let url = ChatworkAPIEndpoint.getRoomsEndpoint
         var request = URLRequest(url: url)
         
         request.httpMethod = HTTPMethod.get.rawValue
         
-        // 検討: 他Repositoryでも共通な気がするから切り出し候補
         let headers = [
-          "accept": "application/json",
-          "x-chatworktoken": token.value
+            "accept": "application/json",
+            "x-chatworktoken": token.value
         ]
         request.allHTTPHeaderFields = headers
         
-        // リクエスト
         let (data, response) = try await URLSession.shared.data(for: request)
         
         let responseStatusCode = (response as! HTTPURLResponse).statusCode
@@ -34,8 +31,9 @@ struct MeRepository: MeRepositoryProtocol {
         
         // デコードする
         do {
-            let decodeResult = try JSONDecoder().decode(Me.self, from: data)
-            return decodeResult
+            let decodeResult = try JSONDecoder().decode([RoomList.RoomObject].self, from: data)
+            let roomListObject = RoomList(body: decodeResult)
+            return roomListObject
         } catch {
             throw APIError.failedToDecodeModel
         }
