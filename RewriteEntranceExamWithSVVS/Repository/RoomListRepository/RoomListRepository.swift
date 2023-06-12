@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomListRepository {
+struct RoomListRepository: RoomListRepositoryProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> RoomList {
         let url = ChatworkAPIEndpoint.getRoomsEndpoint
         var request = URLRequest(url: url)
