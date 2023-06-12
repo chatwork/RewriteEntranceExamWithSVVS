@@ -18,8 +18,8 @@ final class RoomListViewState: ObservableObject {
         // Store購読の処理
         RoomListStore.shared.$value
             .sink { roomListObject in
-                if roomListObject != nil {
-                    self.roomList = roomListObject!.body.map({ room in
+                if let roomListObject = roomListObject {
+                    self.roomList = roomListObject.body.map({ room in
                         RoomInfo(
                             roomId: room.roomId,
                             name: room.name,
@@ -34,17 +34,20 @@ final class RoomListViewState: ObservableObject {
             }
             .store(in: &cancellables)
         
-        fetchRoomList()
+        Task {
+            await fetchRoomList()
+        }
     }
     
-    func fetchRoomList() {
+    func fetchRoomList() async {
         // tokenがないとこの画面には辿り着けないはずから強制アンラップできそう
         // 追記：これだとSwiftUIのプレビューで落ちる、ログイン通ってきてなくて、トークンないから
         let token = ChatworkAPITokenStore.shared.value!
         
-        Task {
-            // TODO: 例外処理
+        do {
             try await RoomListStore.shared.fetch(token: token)
+        } catch {
+            // TODO: 例外処理
         }
     }
     
