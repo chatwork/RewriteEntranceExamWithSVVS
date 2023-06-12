@@ -24,7 +24,7 @@ struct RoomView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             Button {
-                
+                state.onTapSendButton()
             } label: {
                 Text("送信")
             }
