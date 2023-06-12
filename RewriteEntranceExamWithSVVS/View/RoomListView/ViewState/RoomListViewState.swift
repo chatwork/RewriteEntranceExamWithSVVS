@@ -5,15 +5,46 @@
 //  Created by cw-ryu.nakayama on 2023/06/12.
 //
 
+import Combine
 import Foundation
 
 @MainActor
 final class RoomListViewState: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
+    
     @Published var roomList: [RoomInfo] = []
     
     init() {
         // Store購読の処理
-        roomList = testData
+        RoomListStore.shared.$value
+            .sink { roomListObject in
+                if roomListObject != nil {
+                    self.roomList = roomListObject!.body.map({ room in
+                        RoomInfo(
+                            roomId: room.roomId,
+                            name: room.name,
+                            sticky: room.sticky,
+                            unreadNum: room.unreadNum,
+                            mentionNum: room.mentionNum
+                        )
+                    })
+                } else {
+                    self.roomList = []
+                }
+            }
+            .store(in: &cancellables)
+        
+        fetchRoomList()
+    }
+    
+    func fetchRoomList() {
+        // tokenがないとこの画面には辿り着けないはずから強制アンラップできそう
+        let token = ChatworkAPITokenStore.shared.value!
+        
+        Task {
+            // TODO: 例外処理
+            try await RoomListStore.shared.fetch(token: token)
+        }
     }
     
     // リスト表示に必要なものを抜粋した型
@@ -36,43 +67,4 @@ final class RoomListViewState: ObservableObject {
             self.id = roomId
         }
     }
-    
-    // テストデータ
-    let testData = [
-        RoomInfo(
-            roomId: 0,
-            name: "テスト1",
-            sticky: false,
-            unreadNum: 0,
-            mentionNum: 0
-        ),
-        RoomInfo(
-            roomId: 1,
-            name: "テスト2",
-            sticky: true,
-            unreadNum: 1,
-            mentionNum: 2
-        ),
-        RoomInfo(
-            roomId: 2,
-            name: "テスト \(Date.now)",
-            sticky: true,
-            unreadNum: 1,
-            mentionNum: 2
-        ),
-        RoomInfo(
-            roomId: 3,
-            name: "テスト\(Date.now)",
-            sticky: true,
-            unreadNum: 1,
-            mentionNum: 2
-        ),
-        RoomInfo(
-            roomId: 4,
-            name: "テスト\(Date.now)",
-            sticky: true,
-            unreadNum: 1,
-            mentionNum: 2
-        )
-    ]
 }

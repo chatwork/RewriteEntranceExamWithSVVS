@@ -40,6 +40,7 @@ struct RoomListRepositoryMock: RoomListRepositoryProtocol {
                 type: "",
                 role: "",
                 sticky: true,
+                unreadNum: 0,
                 mentionNum: 0,
                 mytaskNum: 0,
                 messageNum: 0,

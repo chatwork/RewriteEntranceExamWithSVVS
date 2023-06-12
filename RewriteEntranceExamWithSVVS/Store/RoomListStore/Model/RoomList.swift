@@ -16,6 +16,7 @@ struct RoomList {
         let type: String
         let role: String
         let sticky: Bool
+        let unreadNum: Int
         let mentionNum: Int
         let mytaskNum: Int
         let messageNum: Int
@@ -30,6 +31,7 @@ struct RoomList {
             case type = "type"
             case role = "role"
             case sticky = "sticky"
+            case unreadNum = "unread_num"
             case mentionNum = "mention_num"
             case mytaskNum = "mytask_num"
             case messageNum = "message_num"
