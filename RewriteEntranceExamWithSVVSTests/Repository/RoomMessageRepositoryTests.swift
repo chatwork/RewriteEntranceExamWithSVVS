@@ -13,7 +13,7 @@ final class RoomMessageRepositoryTests: XCTestCase {
     
     func test_メッセージが送られ_message_idがStringで帰ってくる() async throws {
         let repository = RoomMessageRepository()
-        let roomId = 0 // inputAnyRoomId
+        let roomId = 326121762 // inputAnyRoomId
         let result = try await repository.put(token: ChatworkAPIToken(value: token), roomId: roomId, body: "テストメッセージ")
         
         XCTAssert(result is String)

@@ -19,4 +19,8 @@ struct ChatworkAPIEndpoint {
     static var getRoomsEndpoint: URL {
         return URL(string: roomsEndpoint)! // swiftlint:disable:this force_unwrapping
     }
+    
+    static func getRoomMessageEndpoint(roomId: Int) -> URL {
+        return URL(string: roomsEndpoint + "/\(roomId)/messages")! // swiftlint:disable:this force_unwrapping
+    }
 }
