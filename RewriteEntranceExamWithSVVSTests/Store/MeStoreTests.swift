@@ -15,11 +15,13 @@ final class MeStoreTests: XCTestCase {
         MeStore.shared.setUpForUnitTest()
     }
     
+    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    
     func test_MeStoreからRepositoryを経由してMeの情報を取得できる() async throws {
         // MeStoreのRepositoryをMockに差し替え
         MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .successFetch))
         
-        try await MeStore.shared.fetch(token: ChatworkAPIToken(value: "inputYourToken"))
+        try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
         XCTAssertNotNil(MeStore.shared.value)
     }
     
