@@ -12,8 +12,11 @@ import Foundation
 final class RoomViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
+    @Published var message = ""
+    
     private let roomId: Int
-    @Published var roomName: String = ""
+    @Published private(set) var roomName: String = ""
+    
      
     init(roomId: Int) {
         self.roomId = roomId

@@ -18,8 +18,19 @@ struct RoomView: View {
     }
     
     var body: some View {
-        Text("\(state.roomName)")
-            .navigationTitle(state.roomName)
+        VStack {
+            Text("メッセージを入力してください")
+            TextField("", text: $state.message)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            Button {
+                
+            } label: {
+                Text("送信")
+            }
+
+        }
+        .navigationTitle(state.roomName)
     }
 }
 
