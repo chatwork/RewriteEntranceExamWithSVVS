@@ -7,9 +7,8 @@
 
 import XCTest
 
+@MainActor
 final class RoomListStoreTests: XCTestCase {
-    
-    
     let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
 
     func test_RoomListStoreからRepositoryを経由してルーム一覧の情報を取得できる() async throws {
