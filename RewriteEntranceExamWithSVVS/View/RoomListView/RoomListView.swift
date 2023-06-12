@@ -11,11 +11,20 @@ struct RoomListView: View {
     @StateObject private var state: RoomListViewState = .init()
     
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach(state.roomList) { room in
-                RoomListCell(roomInfo: room)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    VStack(spacing: 0) {
+                        ForEach(state.roomList) { room in
+                            RoomListCell(roomInfo: room)
+                        }
+                    }
+                }
+                Spacer()
             }
+            .navigationBarTitle("ルーム一覧", displayMode: .inline)
         }
+        
     }
 }
 

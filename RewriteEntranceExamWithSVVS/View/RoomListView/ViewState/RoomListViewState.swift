@@ -39,6 +39,7 @@ final class RoomListViewState: ObservableObject {
     
     func fetchRoomList() {
         // tokenがないとこの画面には辿り着けないはずから強制アンラップできそう
+        // 追記：これだとSwiftUIのプレビューで落ちる、ログイン通ってきてなくて、トークンないから
         let token = ChatworkAPITokenStore.shared.value!
         
         Task {
