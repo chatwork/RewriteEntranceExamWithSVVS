@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct RoomListView: View {
+    @StateObject private var state: RoomListViewState = .init()
+    
     var body: some View {
-        Text("RoomListView")
+        VStack(spacing: 0) {
+            ForEach(state.roomList) { room in
+                RoomListCell(roomInfo: room)
+            }
+        }
     }
 }
 
