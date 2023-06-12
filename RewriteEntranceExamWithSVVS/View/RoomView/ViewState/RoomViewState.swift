@@ -34,8 +34,4 @@ final class RoomViewState: ObservableObject {
             }
             .store(in: &cancellables)
     }
-    
-    func onTapSendButton() {
-        
-    }
 }
