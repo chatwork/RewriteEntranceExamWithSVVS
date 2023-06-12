@@ -18,7 +18,7 @@ final class LoginViewStateTests: XCTestCase {
     
     func test_ログイン成功時にフラグが立たない() async throws {
         let state = LoginViewState()
-        state.inputToken = "inputYourToken"
+        state.inputToken = KeyManager().getValue(key: "ChatworkAPIToken") as! String
         await state.onTapLoginButton()
         
         XCTAssertEqual(state.loginFailedAlertFlag, false)

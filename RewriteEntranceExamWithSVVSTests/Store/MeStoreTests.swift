@@ -29,7 +29,7 @@ final class MeStoreTests: XCTestCase {
         // MeStoreのRepositoryをMockに差し替え
         MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .throwStatusCodeIsNot200))
         do {
-            try await MeStore.shared.fetch(token: ChatworkAPIToken(value: "inputYourToken"))
+            try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")
         } catch {
             XCTAssertEqual(error as! APIError, APIError.statusCodeIsNot200)
@@ -41,7 +41,7 @@ final class MeStoreTests: XCTestCase {
         // MeStoreのRepositoryをMockに差し替え
         MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .throwFailedToDecodeModel))
         do {
-            try await MeStore.shared.fetch(token: ChatworkAPIToken(value: "inputYourToken"))
+            try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")
         } catch {
             XCTAssertEqual(error as! APIError, APIError.failedToDecodeModel)
