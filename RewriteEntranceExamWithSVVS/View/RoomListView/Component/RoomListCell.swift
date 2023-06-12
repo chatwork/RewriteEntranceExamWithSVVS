@@ -15,16 +15,18 @@ struct RoomListCell: View {
     }
     
     var body: some View {
-        HStack {
-            Text("\(roomInfo.name)")
-            Spacer()
+        NavigationLink(destination: RoomView(roomId: roomInfo.roomId)) {
+            HStack {
+                Text("\(roomInfo.name)")
+                Spacer()
+            }
+            .padding()
+            .frame(width: UIScreen.main.bounds.width)
+            .background(
+                .white
+            )
+            .border(.black, width: 0.2)
         }
-        .padding()
-        .frame(width: UIScreen.main.bounds.width)
-        .background(
-            .white
-        )
-        .border(.black, width: 0.2)
     }
 }
 

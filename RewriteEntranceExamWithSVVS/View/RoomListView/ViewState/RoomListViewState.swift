@@ -12,13 +12,13 @@ import Foundation
 final class RoomListViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
-    @Published var roomList: [RoomInfo] = []
+    @Published private(set) var roomList: [RoomInfo] = []
     
     init() {
         // Store購読の処理
         RoomListStore.shared.$value
             .sink { roomListObject in
-                if let roomListObject = roomListObject {
+                if let roomListObject {
                     self.roomList = roomListObject.body.map({ room in
                         RoomInfo(
                             roomId: room.roomId,
