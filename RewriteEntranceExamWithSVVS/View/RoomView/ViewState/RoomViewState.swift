@@ -16,8 +16,7 @@ final class RoomViewState: ObservableObject {
     
     private let roomId: Int
     @Published private(set) var roomName: String = ""
-    
-     
+      
     init(roomId: Int) {
         self.roomId = roomId
         
@@ -36,6 +35,13 @@ final class RoomViewState: ObservableObject {
     }
     
     func onTapSendButton() {
-        
+        let token = ChatworkAPITokenStore.shared.value!
+        Task {
+            do {
+                _ = try await RoomMessageRepository().put(token: token, roomId: roomId, body: message)
+            } catch {
+                // TODO: 例外処理
+            }
+        }
     }
 }
