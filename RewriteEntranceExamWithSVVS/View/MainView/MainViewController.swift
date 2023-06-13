@@ -5,14 +5,23 @@
 //  Created by cw-ryu.nakayama on 2023/06/08.
 //
 
+import Combine
 import SwiftUI
 import UIKit
 
 class MainViewController: UIViewController {
+    private var viewState: MainViewState = .init()
+    private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        viewState.returnLoginView
+            .sink { [weak self] _ in
+                self?.dismiss(animated: false, completion: nil)
+            }
+            .store(in: &cancellables)
+        
         embedSwiftUIView()
     }
     

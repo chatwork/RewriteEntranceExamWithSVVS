@@ -16,12 +16,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewState.toRoomListView.sink { [weak self] _ in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyboard.instantiateViewController(withIdentifier: "main_view")
-            self?.present(nextVC, animated: false, completion: nil)
-        }
-        .store(in: &cancellables)
+        viewState.toRoomListView
+            .sink { [weak self] _ in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextVC = storyboard.instantiateViewController(withIdentifier: "main_view")
+                self?.present(nextVC, animated: false, completion: nil)
+            }
+            .store(in: &cancellables)
         
         embedSwiftUIView()
     }
