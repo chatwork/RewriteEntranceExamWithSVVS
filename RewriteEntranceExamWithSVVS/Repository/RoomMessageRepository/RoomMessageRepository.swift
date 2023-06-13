@@ -21,7 +21,7 @@ struct RoomMessageRepository {
         ]
         request.allHTTPHeaderFields = headers
         
-        let postData = NSMutableData(data: "body=\(body)".data(using: .utf8)!)
+        let postData = NSMutableData(data: "body=\(body)".data(using: .utf8)!) // swiftlint:disable:this force_unwrapping
         request.httpBody = postData as Data
 
         // リクエスト

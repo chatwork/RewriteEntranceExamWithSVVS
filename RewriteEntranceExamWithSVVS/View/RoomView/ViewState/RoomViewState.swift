@@ -14,7 +14,7 @@ final class RoomViewState: ObservableObject {
     
     @Published var message = ""
     var disabledSendButton: Bool {
-        return message.isEmpty ? true: false
+        return message.isEmpty ? true : false
     }
     
     private let roomId: Int
@@ -38,7 +38,8 @@ final class RoomViewState: ObservableObject {
     }
     
     func onTapSendButton() {
-        let token = ChatworkAPITokenStore.shared.value!
+        let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
+        // TODO: ViewStateから直接Repositoryを触らないようにするか検討
         Task {
             do {
                 _ = try await RoomMessageRepository().put(token: token, roomId: roomId, body: message)

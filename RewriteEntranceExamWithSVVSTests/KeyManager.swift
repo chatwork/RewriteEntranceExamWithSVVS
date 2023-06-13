@@ -19,6 +19,6 @@ struct KeyManager {
         guard let keys = getKeys() else {
             return nil
         }
-        return keys[key]! as AnyObject
+        return keys[key]! as AnyObject // swiftlint:disable:this force_unwrapping
     }
 }

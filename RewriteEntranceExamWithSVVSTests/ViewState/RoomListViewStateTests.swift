@@ -14,10 +14,8 @@ final class RoomListViewStateTests: XCTestCase {
         RoomListStore.shared.setUpForUnitTest()
     }
     
-
     func test_ViewStateでfetchを依頼しRoomListStoreの値が変わると_RoomListViewStateの値も連動する() async throws {
-        
-        
+         
         let state = RoomListViewState()
         RoomListStore.shared.setUpForUnitTest()
         RoomListStore.shared.injectionRoomListRepositoryMock(mock: RoomListRepositoryMock(desiredStatus: .successFetch))
