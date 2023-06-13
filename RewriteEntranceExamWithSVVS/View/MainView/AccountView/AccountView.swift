@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct AccountView: View {
+    @StateObject private var state: AccountViewState = .init()
+    
     var body: some View {
-        Text("Setting View")
+        VStack {
+            Button {
+                state.displayLogoutAlert()
+            } label: {
+                Text("ログアウト")
+            }
+        }
+        .alert("ログアウトしますか？", isPresented: $state.logoutAlertFlag) {
+            Button("キャンセル", role: .cancel) {}
+            Button("ログアウト", role: .destructive) {
+                state.onTapAlertLogoutButton()
+            }
+        }
     }
 }
 
