@@ -13,6 +13,9 @@ final class RoomViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     @Published var message = ""
+    var disabledSendButton: Bool {
+        return message.isEmpty ? true: false
+    }
     
     private let roomId: Int
     @Published private(set) var roomName: String = ""
@@ -39,6 +42,8 @@ final class RoomViewState: ObservableObject {
         Task {
             do {
                 _ = try await RoomMessageRepository().put(token: token, roomId: roomId, body: message)
+                // 入力メッセージを消す
+                self.message = ""
             } catch {
                 // TODO: 例外処理
             }

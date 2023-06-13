@@ -28,6 +28,7 @@ struct RoomView: View {
             } label: {
                 Text("送信")
             }
+            .disabled(state.disabledSendButton)
 
         }
         .navigationTitle(state.roomName)
