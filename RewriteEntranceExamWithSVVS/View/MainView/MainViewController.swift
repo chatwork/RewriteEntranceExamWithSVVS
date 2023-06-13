@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class RoomListViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class RoomListViewController: UIViewController {
     
     // SwiftUIViewの埋め込み
     private func embedSwiftUIView() {
-        let viewController: UIHostingController<RoomListView> = UIHostingController(rootView: RoomListView())
+        let viewController: UIHostingController<MainView> = UIHostingController(rootView: MainView())
         addChild(viewController)
 
         swiftUIView.addSubview(viewController.view)

@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
         
         viewState.toRoomListView.sink { [weak self] _ in
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let nextVC = storyboard.instantiateViewController(withIdentifier: "room_list_view")
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "main_view")
             self?.present(nextVC, animated: false, completion: nil)
         }
         .store(in: &cancellables)

@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="-2"/>
         </scene>
-        <!--Room List View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="RaF-e5-T0b">
             <objects>
-                <viewController storyboardIdentifier="room_list_view" modalPresentationStyle="fullScreen" id="aKK-qa-31o" customClass="RoomListViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main_view" modalPresentationStyle="fullScreen" id="aKK-qa-31o" customClass="MainViewController" customModule="RewriteEntranceExamWithSVVS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OMJ-Dk-IT9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
