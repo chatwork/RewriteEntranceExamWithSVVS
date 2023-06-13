@@ -24,6 +24,7 @@ struct LoginView: View {
         }
         .alert("ログインに失敗しました", isPresented: $state.loginFailedAlertFlag) {
             Button {
+                // アラートを閉じるだけの処理
                 state.onTapAlertCloseButton()
             } label: {
                 Text("閉じる")

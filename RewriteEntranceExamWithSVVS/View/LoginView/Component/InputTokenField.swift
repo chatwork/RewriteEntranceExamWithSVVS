@@ -15,7 +15,10 @@ struct InputTokenField: View {
     }
     
     var body: some View {
-        // Enter以外でキーボードを閉じる処理の実装も必要だと思うけど、今回の課題の範囲からは外れそうだから時間を優先して一旦保留
+        /*
+            Enter以外でキーボードを閉じる処理の実装も必要そうだけど、
+            今回の課題の範囲からは外れそうだから時間を優先して一旦保留
+         */
         TextField(
             "Chatwork APIのトークンを入力してください",
             text: $state.inputToken

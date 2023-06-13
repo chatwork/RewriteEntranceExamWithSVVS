@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // ViewStateからの指示で画面遷移をする
         viewState.toRoomListView
             .sink { [weak self] _ in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -29,6 +30,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
+        /*
+         このタイミングだと成功する
+            viewDidLoadにこの処理を書くと成功しないのは
+            おそらくそのときはまだ self? が nil になるから？
+         */
         viewState.checkFirstLogin()
     }
 

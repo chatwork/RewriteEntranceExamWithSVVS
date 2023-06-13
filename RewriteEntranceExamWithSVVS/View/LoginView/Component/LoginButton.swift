@@ -16,6 +16,11 @@ struct LoginButton: View {
     
     var body: some View {
         Button {
+            /*
+             TODO: (検討)
+                サンプルコードではView内でTaskで非同期コンテキストを作ってたから
+                ここに書いたけど、ViewStateに移動させた方が見た目はスッキリしそう？
+             */
             Task {
                 await state.onTapLoginButton()
             }

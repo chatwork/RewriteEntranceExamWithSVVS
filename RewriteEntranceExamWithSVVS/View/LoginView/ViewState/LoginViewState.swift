@@ -11,7 +11,9 @@ import UIKit
 
 @MainActor
 final class LoginViewState: ObservableObject {
+    // Viewからの入力値
     @Published var inputToken: String = ""
+    // ログイン失敗時のアラートをViewへ伝えるフラグ
     @Published var loginFailedAlertFlag = false
     
     func onTapLoginButton() async {
@@ -30,6 +32,7 @@ final class LoginViewState: ObservableObject {
         }
     }
     
+    // 初回ログイン(トークン未保存)かどうかを判定する
     func checkFirstLogin() {
         let savedToken = ChatworkAPITokenStore.shared.value
         // 初回ログイン出ないなら遷移させる
