@@ -12,7 +12,17 @@ struct MainView: View {
         TabView {
             RoomListView()
                 .tabItem {
-                    Image(systemName: "1.circle.fill")
+                    VStack {
+                        Image(systemName: "text.bubble.fill")
+                        Text("チャット")
+                    }
+                }
+            AccountView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "person.fill")
+                        Text("アカウント")
+                    }
                 }
         }
     }
