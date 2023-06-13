@@ -13,6 +13,7 @@ final class RoomListViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     @Published private(set) var roomList: [RoomInfo] = []
+    @Published var failedfetchRoomListAlertFlag = false
     
     init() {
         // Store購読の処理
@@ -39,6 +40,12 @@ final class RoomListViewState: ObservableObject {
         }
     }
     
+    func onTapFailedfetchRoomListAlertButton() {
+        Task {
+            await fetchRoomList()
+        }
+    }
+    
     func fetchRoomList() async {
         // tokenがないとこの画面には辿り着けないはずから強制アンラップできそう
         // 追記：これだとSwiftUIのプレビューで落ちる、ログイン通ってきてなくて、トークンないから
@@ -47,7 +54,7 @@ final class RoomListViewState: ObservableObject {
         do {
             try await RoomListStore.shared.fetch(token: token)
         } catch {
-            // TODO: 例外処理
+            failedfetchRoomListAlertFlag = true
         }
     }
     

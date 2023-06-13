@@ -24,7 +24,15 @@ struct RoomListView: View {
             }
             .navigationBarTitle("ルーム一覧", displayMode: .inline)
         }
-        
+        .alert("ルーム情報の取得に失敗しました", isPresented: $state.failedfetchRoomListAlertFlag) {
+            // ここの挙動を確認するには...
+            //  1. ログインする
+            //  2. アプリを落とす
+            //  3. ネット接続のない状態で自動ログインでアプリを起動する
+            Button("再読み込み") {
+                state.onTapFailedfetchRoomListAlertButton()
+            }
+        }
     }
 }
 
