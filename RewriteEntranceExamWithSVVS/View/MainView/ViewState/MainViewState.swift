@@ -13,6 +13,7 @@ final class MainViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     init() {
+        // トークンがないならタブビューより前のビューに戻る
         ChatworkAPITokenStore.shared.$value
             .sink { token in
                 if token == nil {

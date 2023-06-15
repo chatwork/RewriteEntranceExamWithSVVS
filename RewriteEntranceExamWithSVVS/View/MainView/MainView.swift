@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
+            // ルーム一覧のタブ
             RoomListView()
                 .tabItem {
                     VStack {
@@ -17,6 +18,7 @@ struct MainView: View {
                         Text("チャット")
                     }
                 }
+            // アカウント関連のタブ
             AccountView()
                 .tabItem {
                     VStack {
