@@ -27,7 +27,9 @@ struct RoomView: View {
                 .padding()
             // メッセージ送信ボタン
             Button {
-                state.onTapSendButton()
+                Task {
+                    await state.onTapSendButton()
+                }
             } label: {
                 Text("送信")
             }
@@ -38,7 +40,9 @@ struct RoomView: View {
         .alert("メッセージ送信に失敗しました", isPresented: $state.failedSendMessageAlertFlag) {
             Button("キャンセル", role: .cancel) {}
             Button("再送信") {
-                state.onTapFailedAlertResendButton()
+                Task {
+                    await state.onTapFailedAlertResendButton()
+                }
             }
         }
     }

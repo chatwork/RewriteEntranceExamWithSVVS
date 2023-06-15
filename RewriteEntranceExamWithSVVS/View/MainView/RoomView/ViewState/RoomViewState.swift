@@ -44,30 +44,26 @@ final class RoomViewState: ObservableObject {
     }
     
     // 送信ボタンの処理
-    func onTapSendButton() {
+    func onTapSendButton() async {
         let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
-        Task {
-            do {
-                _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
-                // 入力メッセージを消す
-                self.message = ""
-            } catch {
-                failedSendMessageAlertFlag = true
-            }
+        do {
+            _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
+            // 入力メッセージを消す
+            self.message = ""
+        } catch {
+            failedSendMessageAlertFlag = true
         }
     }
     
     // アラートの再送信ボタンの処理
-    func onTapFailedAlertResendButton() {
+    func onTapFailedAlertResendButton() async {
         let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
-        Task {
-            do {
-                _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
-                // 入力メッセージを消す
-                self.message = ""
-            } catch {
-                failedSendMessageAlertFlag = true
-            }
+        do {
+            _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
+            // 入力メッセージを消す
+            self.message = ""
+        } catch {
+            failedSendMessageAlertFlag = true
         }
     }
 }

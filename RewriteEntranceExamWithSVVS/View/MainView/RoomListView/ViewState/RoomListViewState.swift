@@ -46,10 +46,8 @@ final class RoomListViewState: ObservableObject {
     }
     
     // Storeのルーム情報取得に失敗した時のに表示されるアラートの「再読み込みボタン」の動作
-    func onTapFailedFetchRoomListAlertButton() {
-        Task {
-            await fetchRoomList()
-        }
+    func onTapFailedFetchRoomListAlertButton() async {
+        await fetchRoomList()
     }
     
     // Storeにルーム情報の取得を依頼
