@@ -12,12 +12,19 @@ struct AccountView: View {
     
     var body: some View {
         VStack {
+            if state.me != nil {
+                AccountInfoView(me: state.me!)
+            }
+            
             // ログアウトボタン
             Button {
                 state.displayLogoutAlert()
             } label: {
                 Text("ログアウト")
             }
+        }
+        .task {
+            await state.fetchMe()
         }
         .alert("ログアウトしますか？", isPresented: $state.logoutAlertFlag) {
             Button("キャンセル", role: .cancel) {}

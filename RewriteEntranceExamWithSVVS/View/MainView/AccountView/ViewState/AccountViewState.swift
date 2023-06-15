@@ -5,11 +5,25 @@
 //  Created by cw-ryu.nakayama on 2023/06/13.
 //
 
+import Combine
 import Foundation
 
 @MainActor
 final class AccountViewState: ObservableObject {
+    private var cancellables: Set<AnyCancellable> = []
+    
     @Published var logoutAlertFlag = false
+    @Published private(set) var me: Me?
+    
+    init() {
+        MeStore.shared.$value
+            .sink { me in
+                if let me {
+                    self.me = me
+                }
+            }
+            .store(in: &cancellables)
+    }
     
     // ログアウトのアラートを表示する処理
     func displayLogoutAlert() {
@@ -19,5 +33,14 @@ final class AccountViewState: ObservableObject {
     // アラートの「ログアウトボタンの処理」
     func onTapAlertLogoutButton() {
         ChatworkAPITokenStore.shared.delete()
+    }
+    
+    func fetchMe() async {
+        let token = ChatworkAPITokenStore.shared.value!
+        do {
+            try await MeStore.shared.fetch(token: token)
+        } catch {
+            // TODO: 例外処理
+        }
     }
 }
