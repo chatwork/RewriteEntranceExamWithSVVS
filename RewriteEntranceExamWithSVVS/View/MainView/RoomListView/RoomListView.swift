@@ -13,8 +13,10 @@ struct RoomListView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // 一覧の部分
                 ScrollView {
                     VStack(spacing: 0) {
+                        // ルーム数分のセル繰り返し表示
                         ForEach(state.roomList) { room in
                             RoomListCell(roomInfo: room)
                         }
@@ -24,7 +26,7 @@ struct RoomListView: View {
             }
             .navigationBarTitle("ルーム一覧", displayMode: .inline)
         }
-        .alert("ルーム情報の取得に失敗しました", isPresented: $state.failedfetchRoomListAlertFlag) {
+        .alert("ルーム情報の取得に失敗しました", isPresented: $state.failedFetchRoomListAlertFlag) {
             // ここの挙動を確認するには...
             //  1. ログインする
             //  2. アプリを落とす

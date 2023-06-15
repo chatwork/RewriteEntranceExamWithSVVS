@@ -15,6 +15,8 @@ struct RoomListCell: View {
     }
     
     var body: some View {
+        // ルーム画面にはroomIdだけを持っていく
+        // それ以外の情報はroomId側で再度Storeに問い合わせる
         NavigationLink(destination: RoomView(roomId: roomInfo.roomId)) {
             HStack {
                 Text("\(roomInfo.name)")
