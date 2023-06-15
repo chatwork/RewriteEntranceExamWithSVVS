@@ -12,6 +12,7 @@ struct AccountView: View {
     
     var body: some View {
         VStack {
+            // ログアウトボタン
             Button {
                 state.displayLogoutAlert()
             } label: {

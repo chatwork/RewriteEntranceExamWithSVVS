@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoomView: View {
+    // ルーム一覧画面から渡される
     private let roomId: Int
     
     @StateObject private var state: RoomViewState
@@ -20,9 +21,11 @@ struct RoomView: View {
     var body: some View {
         VStack {
             Text("メッセージを入力してください")
+            // メッセージ入力欄
             TextField("", text: $state.message)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
+            // メッセージ送信ボタン
             Button {
                 state.onTapSendButton()
             } label: {

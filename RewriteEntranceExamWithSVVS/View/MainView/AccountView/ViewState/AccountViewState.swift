@@ -11,10 +11,12 @@ import Foundation
 final class AccountViewState: ObservableObject {
     @Published var logoutAlertFlag = false
     
+    // ログアウトのアラートを表示する処理
     func displayLogoutAlert() {
         self.logoutAlertFlag = true
     }
     
+    // アラートの「ログアウトボタンの処理」
     func onTapAlertLogoutButton() {
         ChatworkAPITokenStore.shared.delete()
     }
