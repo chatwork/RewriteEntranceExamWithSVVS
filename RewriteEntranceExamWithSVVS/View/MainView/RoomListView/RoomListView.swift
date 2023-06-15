@@ -32,7 +32,7 @@ struct RoomListView: View {
             //  2. アプリを落とす
             //  3. ネット接続のない状態で自動ログインでアプリを起動する
             Button("再読み込み") {
-                state.onTapFailedfetchRoomListAlertButton()
+                state.onTapFailedFetchRoomListAlertButton()
             }
         }
     }
