@@ -44,10 +44,9 @@ final class RoomViewState: ObservableObject {
     // 送信ボタンの処理
     func onTapSendButton() {
         let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
-        // TODO: ViewStateから直接Repositoryを触らないようにするか検討
         Task {
             do {
-                _ = try await RoomMessageRepository().put(token: token, roomId: roomId, body: message)
+                _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
                 // 入力メッセージを消す
                 self.message = ""
             } catch {
