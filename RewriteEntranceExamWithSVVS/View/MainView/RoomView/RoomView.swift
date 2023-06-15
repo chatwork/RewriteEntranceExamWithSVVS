@@ -35,6 +35,12 @@ struct RoomView: View {
 
         }
         .navigationTitle(state.roomName)
+        .alert("メッセージ送信に失敗しました", isPresented: $state.failedSendMessageAlertFlag) {
+            Button("キャンセル", role: .cancel) {}
+            Button("再送信") {
+                state.onTapFailedAlertResendButton()
+            }
+        }
     }
 }
 

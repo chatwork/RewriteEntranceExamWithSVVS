@@ -23,6 +23,8 @@ final class RoomViewState: ObservableObject {
     private let roomId: Int
     @Published private(set) var roomName: String = ""
     
+    @Published var failedSendMessageAlertFlag = false
+    
     init(roomId: Int) {
         self.roomId = roomId
         
@@ -50,7 +52,21 @@ final class RoomViewState: ObservableObject {
                 // 入力メッセージを消す
                 self.message = ""
             } catch {
-                // TODO: 例外処理
+                failedSendMessageAlertFlag = true
+            }
+        }
+    }
+    
+    // アラートの再送信ボタンの処理
+    func onTapFailedAlertResendButton() {
+        let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
+        Task {
+            do {
+                _ = try await MessagesStore.shared.sendMessage(token: token, roomId: roomId, message: message)
+                // 入力メッセージを消す
+                self.message = ""
+            } catch {
+                failedSendMessageAlertFlag = true
             }
         }
     }
