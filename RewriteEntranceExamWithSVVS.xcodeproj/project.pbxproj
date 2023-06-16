@@ -238,7 +238,7 @@
 			children = (
 				67F86E592A317E2700F16733 /* ViewState */,
 				6799FD302A314F44000FF866 /* Store */,
-				6793FEF22A2FFAD9005EDD9D /* Repository */,
+				6793FEF22A2FFAD9005EDD9D /* API */,
 				67F86E652A319E2E00F16733 /* ValueObject */,
 				673B2F802A36971400B934A6 /* KeyManager.swift */,
 			);
@@ -368,7 +368,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6793FEF22A2FFAD9005EDD9D /* Repository */ = {
+		6793FEF22A2FFAD9005EDD9D /* API */ = {
 			isa = PBXGroup;
 			children = (
 				6793FEF32A2FFBB1005EDD9D /* MeAPITests.swift */,
@@ -376,7 +376,7 @@
 				67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */,
 				673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */,
 			);
-			path = Repository;
+			path = API;
 			sourceTree = "<group>";
 		};
 		6793FEF62A2FFEE1005EDD9D /* APIClient */ = {
