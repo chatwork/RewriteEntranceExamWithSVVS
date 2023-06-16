@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RoomListRepositoryProtocol {
+protocol RoomListAPIProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> RoomList
 }

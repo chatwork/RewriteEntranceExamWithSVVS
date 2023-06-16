@@ -13,10 +13,10 @@ final class MeStore {
     
     @Published private(set) var value: Me?
     
-    private var meRepository: MeRepositoryProtocol = MeRepository()
+    private var meAPI: MeAPIProtocol = MeAPI()
     
     func fetch(token: ChatworkAPIToken) async throws {
-        let fetchResult = try await meRepository.fetch(token: token)
+        let fetchResult = try await meAPI.fetch(token: token)
         value = fetchResult
     }
 }
@@ -26,10 +26,10 @@ extension MeStore {
     // プロパティを初期状態にする
     func setUpForUnitTest() {
         value = nil
-        meRepository = MeRepository()
+        meAPI = MeAPI()
     }
     
-    func injectionMeRepositoryMock(mock: MeRepositoryProtocol) {
-        meRepository = mock
+    func injectionMeAPIMock(mock: MeAPIProtocol) {
+        meAPI = mock
     }
 }

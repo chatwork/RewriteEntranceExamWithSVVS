@@ -17,17 +17,17 @@ final class MeStoreTests: XCTestCase {
     
     let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
     
-    func test_MeStoreからRepositoryを経由してMeの情報を取得できる() async throws {
-        // MeStoreのRepositoryをMockに差し替え
-        MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .successFetch))
+    func test_MeStoreからAPIを経由してMeの情報を取得できる() async throws {
+        // MeStoreのAPIをMockに差し替え
+        MeStore.shared.injectionMeAPIMock(mock: MeAPIMock(desiredStatus: .successFetch))
         
         try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
         XCTAssertNotNil(MeStore.shared.value)
     }
     
-    func test_RepositoryがfetchでstatusCodeIsNot200を投げた場合に_MeStoreにMeの情報が存在せず_その例外が伝播される() async throws {
-        // MeStoreのRepositoryをMockに差し替え
-        MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .throwStatusCodeIsNot200))
+    func test_APIがfetchでstatusCodeIsNot200を投げた場合に_MeStoreにMeの情報が存在せず_その例外が伝播される() async throws {
+        // MeStoreのAPIをMockに差し替え
+        MeStore.shared.injectionMeAPIMock(mock: MeAPIMock(desiredStatus: .throwStatusCodeIsNot200))
         do {
             try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")
@@ -37,9 +37,9 @@ final class MeStoreTests: XCTestCase {
         }
     }
     
-    func test_RepositoryがfetchでfailedToDecodeModelを投げた場合に_MeStoreにMeの情報が存在せず_その例外が伝播される() async throws {
-        // MeStoreのRepositoryをMockに差し替え
-        MeStore.shared.injectionMeRepositoryMock(mock: MeRepositoryMock(desiredStatus: .throwFailedToDecodeModel))
+    func test_APIがfetchでfailedToDecodeModelを投げた場合に_MeStoreにMeの情報が存在せず_その例外が伝播される() async throws {
+        // MeStoreのAPIをMockに差し替え
+        MeStore.shared.injectionMeAPIMock(mock: MeAPIMock(desiredStatus: .throwFailedToDecodeModel))
         do {
             try await MeStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")

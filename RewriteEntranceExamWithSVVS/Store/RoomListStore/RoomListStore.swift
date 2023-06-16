@@ -13,10 +13,10 @@ final class RoomListStore {
     
     @Published private(set) var value: RoomList?
     
-    private var roomListRepository: RoomListRepositoryProtocol = RoomListRepository()
+    private var roomListAPI: RoomListAPIProtocol = RoomListAPI()
     
     func fetch(token: ChatworkAPIToken) async throws {
-        let fetchResult = try await roomListRepository.fetch(token: token)
+        let fetchResult = try await roomListAPI.fetch(token: token)
         value = fetchResult
     }
 }
@@ -25,10 +25,10 @@ final class RoomListStore {
 extension RoomListStore {
     func setUpForUnitTest() {
         value = nil
-        roomListRepository = RoomListRepository()
+        roomListAPI = RoomListAPI()
     }
     
-    func injectionRoomListRepositoryMock(mock: RoomListRepositoryProtocol) {
-        roomListRepository = mock
+    func injectionRoomListAPIMock(mock: RoomListAPIProtocol) {
+        roomListAPI = mock
     }
 }

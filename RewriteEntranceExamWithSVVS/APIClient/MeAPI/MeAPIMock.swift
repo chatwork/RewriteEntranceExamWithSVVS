@@ -1,5 +1,5 @@
 //
-//  MeRepositoryMock.swift
+//  MeAPIMock.swift
 //  RewriteEntranceExamWithSVVS
 //
 //  Created by cw-ryu.nakayama on 2023/06/08.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MeRepositoryMock: MeRepositoryProtocol {
+struct MeAPIMock: MeAPIProtocol {
     private let desiredStatus: Status
     
     init(desiredStatus: Status) {

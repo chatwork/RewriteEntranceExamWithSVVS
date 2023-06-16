@@ -12,7 +12,7 @@ final class ChatworkAPITokenStoreTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        let repository = ChatworkAPITokenRepository()
+        let repository = ChatworkAPITokenManager()
         repository.delete()
     }
 

@@ -27,6 +27,6 @@ final class MessagesStore {
     static let shared: MessagesStore = .init()
     
     func sendMessage(token: ChatworkAPIToken, roomId: Int, message: String) async throws {
-        try await _ = RoomMessageRepository().put(token: token, roomId: roomId, body: message)
+        try await _ = RoomMessageAPI().put(token: token, roomId: roomId, body: message)
     }
 }

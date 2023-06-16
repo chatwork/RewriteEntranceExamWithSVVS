@@ -17,7 +17,7 @@ final class ChatworkAPITokenStore {
         self.load()
     }
     
-    let repository = ChatworkAPITokenRepository()
+    let repository = ChatworkAPITokenManager()
     
     func load() {
         value = repository.load()

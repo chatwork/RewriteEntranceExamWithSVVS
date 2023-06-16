@@ -1,5 +1,5 @@
 //
-//  RoomMessageRepository.swift
+//  RoomMessageAPI.swift
 //  RewriteEntranceExamWithSVVS
 //
 //  Created by cw-ryu.nakayama on 2023/06/13.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct RoomMessageRepository {
+struct RoomMessageAPI {
     func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String {
         let url = ChatworkAPIEndpoint.getRoomMessageEndpoint(roomId: roomId)
         var request = URLRequest(url: url)
 
         request.httpMethod = HTTPMethod.post.rawValue
 
-        // 検討: 他Repositoryでも共通な気がするから切り出し候補
+        // 検討: 他APIでも共通な気がするから切り出し候補
         let headers = [
           "accept": "application/json",
           "x-chatworktoken": token.value

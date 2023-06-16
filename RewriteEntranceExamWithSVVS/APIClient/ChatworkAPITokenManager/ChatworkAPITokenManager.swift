@@ -1,5 +1,5 @@
 //
-//  ChatworkAPITokenRepository.swift
+//  ChatworkAPITokenAPI.swift
 //  RewriteEntranceExamWithSVVS
 //
 //  Created by cw-ryu.nakayama on 2023/06/08.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatworkAPITokenRepository {
+struct ChatworkAPITokenManager {
     private let key = "ChatworkAPIToken"
     
     func save(tokenData: ChatworkAPIToken) {

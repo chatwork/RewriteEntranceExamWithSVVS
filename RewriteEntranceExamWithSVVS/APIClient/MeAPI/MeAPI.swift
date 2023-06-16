@@ -1,5 +1,5 @@
 //
-//  MeRepository.swift
+//  MeAPI.swift
 //  RewriteEntranceExamWithSVVS
 //
 //  Created by cw-ryu.nakayama on 2023/06/07.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MeRepository: MeRepositoryProtocol {
+struct MeAPI: MeAPIProtocol {
     // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
     func fetch(token: ChatworkAPIToken) async throws -> Me {
         let url = ChatworkAPIEndpoint.getMeEndpoint
@@ -15,7 +15,7 @@ struct MeRepository: MeRepositoryProtocol {
         
         request.httpMethod = HTTPMethod.get.rawValue
         
-        // 検討: 他Repositoryでも共通な気がするから切り出し候補
+        // 検討: 他APIでも共通な気がするから切り出し候補
         let headers = [
           "accept": "application/json",
           "x-chatworktoken": token.value

@@ -1,5 +1,5 @@
 //
-//  RoomListRepository.swift
+//  RoomListAPI.swift
 //  RewriteEntranceExamWithSVVS
 //
 //  Created by cw-ryu.nakayama on 2023/06/09.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomListRepository: RoomListRepositoryProtocol {
+struct RoomListAPI: RoomListAPIProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> RoomList {
         let url = ChatworkAPIEndpoint.getRoomsEndpoint
         var request = URLRequest(url: url)
