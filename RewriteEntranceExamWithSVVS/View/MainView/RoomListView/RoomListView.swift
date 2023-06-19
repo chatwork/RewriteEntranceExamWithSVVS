@@ -14,14 +14,16 @@ struct RoomListView: View {
         NavigationView {
             VStack {
                 // 一覧の部分
-                ScrollView {
-                    VStack(spacing: 0) {
-                        // ルーム数分のセル繰り返し表示
-                        ForEach(state.roomList) { room in
-                            RoomListCell(roomInfo: room)
+                List {
+                    // ルーム数分のセル繰り返し表示
+                    ForEach(state.roomList) { room in
+//                            RoomListCell(roomInfo: room)
+                        NavigationLink(destination: RoomView(roomId: room.roomId)) {
+                            Text("\(room.name)")
                         }
                     }
                 }
+                .listStyle(.plain)
                 Spacer()
             }
             .navigationBarTitle("ルーム一覧", displayMode: .inline)
