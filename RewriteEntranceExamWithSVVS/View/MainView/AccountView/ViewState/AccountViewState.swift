@@ -35,6 +35,7 @@ final class AccountViewState: ObservableObject {
         ChatworkAPITokenStore.shared.delete()
     }
     
+    // 自動ログインで入ってきた時にfetchMe()をしないとMeの情報が未取得になっている
     func fetchMe() async {
         let token = ChatworkAPITokenStore.shared.value!
         do {
