@@ -62,6 +62,9 @@
 		6799FD372A31552F000FF866 /* MeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD352A3154C6000FF866 /* MeStore.swift */; };
 		6799FD382A31594F000FF866 /* MeAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2C2A314ADB000FF866 /* MeAPIProtocol.swift */; };
 		67D5AC132A418B3500F78D37 /* MeAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2E2A314B66000FF866 /* MeAPIMock.swift */; };
+		67D5AC192A41934000F78D37 /* MessagesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */; };
+		67D5AC1B2A41935D00F78D37 /* RoomMessageAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */; };
+		67D5AC1D2A41939900F78D37 /* RoomMessageAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */; };
 		67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
 		67D7BD4F2A32F28B002F684A /* RoomListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */; };
 		67D7BD502A32F514002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
@@ -144,6 +147,9 @@
 		6799FD2E2A314B66000FF866 /* MeAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeAPIMock.swift; sourceTree = "<group>"; };
 		6799FD312A314F74000FF866 /* MeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStoreTests.swift; sourceTree = "<group>"; };
 		6799FD352A3154C6000FF866 /* MeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStore.swift; sourceTree = "<group>"; };
+		67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStoreTests.swift; sourceTree = "<group>"; };
+		67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageAPIProtocol.swift; sourceTree = "<group>"; };
+		67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageAPIMock.swift; sourceTree = "<group>"; };
 		67D7BD4C2A32EF08002F684A /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListRepositoryTests.swift; sourceTree = "<group>"; };
 		67D7BD522A3307C0002F684A /* RoomListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListAPI.swift; sourceTree = "<group>"; };
@@ -256,6 +262,8 @@
 			isa = PBXGroup;
 			children = (
 				6723F1FA2A37DEFA0094FEB8 /* RoomMessageAPI.swift */,
+				67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */,
+				67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */,
 			);
 			path = RoomMessageAPI;
 			sourceTree = "<group>";
@@ -407,6 +415,7 @@
 				6799FD312A314F74000FF866 /* MeStoreTests.swift */,
 				677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */,
 				673B2F872A369EF700B934A6 /* RoomListStoreTests.swift */,
+				67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -699,6 +708,7 @@
 				673906E62A2F1A7D00F6E527 /* Me.swift in Sources */,
 				6793FEF82A2FFEF2005EDD9D /* MeAPI.swift in Sources */,
 				67D7BD532A3307C0002F684A /* RoomListAPI.swift in Sources */,
+				67D5AC1B2A41935D00F78D37 /* RoomMessageAPIProtocol.swift in Sources */,
 				6723F1FF2A37F0EF0094FEB8 /* MainView.swift in Sources */,
 				6793FEFC2A30183F005EDD9D /* HTTPMethod.swift in Sources */,
 				672D2E112A3AFBB900AA3778 /* AccountInfoView.swift in Sources */,
@@ -724,6 +734,7 @@
 				673B2F832A369B4A00B934A6 /* RoomListAPIMock.swift in Sources */,
 				67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */,
 				6799FD2D2A314ADB000FF866 /* MeAPIProtocol.swift in Sources */,
+				67D5AC1D2A41939900F78D37 /* RoomMessageAPIMock.swift in Sources */,
 				67F86E5E2A3182B500F16733 /* MainViewController.swift in Sources */,
 				67F86E6F2A31B4B300F16733 /* ChatworkAPITokenManager.swift in Sources */,
 				67F86E642A319BEF00F16733 /* ChatworkAPIToken.swift in Sources */,
@@ -745,6 +756,7 @@
 				67D7BD542A330B1A002F684A /* RoomListAPI.swift in Sources */,
 				673B2F8C2A36A16400B934A6 /* RoomListAPIMock.swift in Sources */,
 				673B2F812A36971400B934A6 /* KeyManager.swift in Sources */,
+				67D5AC192A41934000F78D37 /* MessagesStoreTests.swift in Sources */,
 				6793FEF42A2FFBB1005EDD9D /* MeAPITests.swift in Sources */,
 				677CFDC42A32ABB9004B7195 /* ChatworkAPITokenStore.swift in Sources */,
 				677CFDBC2A32A0EA004B7195 /* ChatworkAPITokenManager.swift in Sources */,

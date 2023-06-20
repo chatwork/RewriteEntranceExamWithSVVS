@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomMessageAPI {
+struct RoomMessageAPI: RoomMessageAPIProtocol {
     func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String {
         let url = ChatworkAPIEndpoint.getRoomMessageEndpoint(roomId: roomId)
         var request = URLRequest(url: url)
