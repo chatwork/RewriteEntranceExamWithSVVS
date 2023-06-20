@@ -13,7 +13,7 @@ final class RoomListStoreTests: XCTestCase {
 
     func test_RoomListStoreからAPIを経由してルーム一覧の情報を取得できる() async throws {
         // RoomListStoreのAPIをMockに差し替え
-        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock(desiredStatus: .successFetch))
+        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock.successFetch)
         
         try await RoomListStore.shared.fetch(token: ChatworkAPIToken(value: token))
         XCTAssertNotNil(RoomListStore.shared.value)
@@ -21,7 +21,7 @@ final class RoomListStoreTests: XCTestCase {
     
     func test_APIがfetchでstatusCodeIsNot200を投げた場合に_RoomListStoreにRoomListの情報が存在せず_その例外が伝播される() async throws {
         // RoomListStoreのAPIをMockに差し替え
-        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock(desiredStatus: .throwStatusCodeIsNot200))
+        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock.throwStatusCodeIsNot200)
         do {
             try await RoomListStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")
@@ -33,7 +33,7 @@ final class RoomListStoreTests: XCTestCase {
     
     func test_APIがfetchでfailedToDecodeModelを投げた場合に_RoomListStoreにRoomListの情報が存在せず_その例外が伝播される() async throws {
         // RoomListStoreのAPIをMockに差し替え
-        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock(desiredStatus: .throwFailedToDecodeModel))
+        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock.throwFailedToDecodeModel)
         do {
             try await RoomListStore.shared.fetch(token: ChatworkAPIToken(value: token))
             XCTFail("例外を期待したのに起きませんでした")

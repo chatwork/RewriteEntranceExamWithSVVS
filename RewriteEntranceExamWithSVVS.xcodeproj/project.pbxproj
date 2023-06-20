@@ -61,6 +61,7 @@
 		6799FD362A3154C6000FF866 /* MeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD352A3154C6000FF866 /* MeStore.swift */; };
 		6799FD372A31552F000FF866 /* MeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD352A3154C6000FF866 /* MeStore.swift */; };
 		6799FD382A31594F000FF866 /* MeAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2C2A314ADB000FF866 /* MeAPIProtocol.swift */; };
+		67D5AC132A418B3500F78D37 /* MeAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD2E2A314B66000FF866 /* MeAPIMock.swift */; };
 		67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
 		67D7BD4F2A32F28B002F684A /* RoomListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */; };
 		67D7BD502A32F514002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
@@ -715,6 +716,7 @@
 				6723F2092A384C9C0094FEB8 /* KeyManager.swift in Sources */,
 				6723F2052A37F8460094FEB8 /* AccountViewState.swift in Sources */,
 				677CFDC02A32AAFD004B7195 /* ChatworkAPITokenStore.swift in Sources */,
+				67D5AC132A418B3500F78D37 /* MeAPIMock.swift in Sources */,
 				6723F1FB2A37DEFA0094FEB8 /* RoomMessageAPI.swift in Sources */,
 				673B2F9C2A36E22000B934A6 /* RoomViewState.swift in Sources */,
 				6799FD362A3154C6000FF866 /* MeStore.swift in Sources */,

@@ -18,7 +18,7 @@ final class RoomListViewStateTests: XCTestCase {
          
         let state = RoomListViewState()
         RoomListStore.shared.setUpForUnitTest()
-        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock(desiredStatus: .successFetch))
+        RoomListStore.shared.injectionRoomListAPIMock(mock: RoomListAPIMock.successFetch)
         XCTAssertEqual(state.roomList.count, 0)
         
         await state.fetchRoomList()

@@ -7,15 +7,14 @@
 
 import Foundation
 
-struct RoomListAPIMock: RoomListAPIProtocol {
-    private let desiredStatus: Status
-    init(desiredStatus: Status) {
-        self.desiredStatus = desiredStatus
-    }
+enum RoomListAPIMock: RoomListAPIProtocol {
+    case successFetch
+    case throwStatusCodeIsNot200
+    case throwFailedToDecodeModel
     
     func fetch(token: ChatworkAPIToken) async throws -> RoomList {
-        try? await Task.sleep(nanoseconds: 1_000_000)
-        switch desiredStatus {
+        try? await Task.sleep(nanoseconds: 1_000_000_00)
+        switch self {
         case.successFetch:
             return roomList
         case .throwStatusCodeIsNot200:
@@ -25,30 +24,25 @@ struct RoomListAPIMock: RoomListAPIProtocol {
         }
     }
     
-    // fetchの結果を決める
-    enum Status {
-        case successFetch
-        case throwStatusCodeIsNot200
-        case throwFailedToDecodeModel
+    private var roomList: RoomList {
+        RoomList(
+            body: [
+                .init(
+                    roomId: 0,
+                    name: "",
+                    type: "",
+                    role: "",
+                    sticky: true,
+                    unreadNum: 0,
+                    mentionNum: 0,
+                    mytaskNum: 0,
+                    messageNum: 0,
+                    fileNum: 0,
+                    taskNum: 0,
+                    iconPath: "",
+                    lastUpdateTime: 0
+                )
+            ]
+        )
     }
-    
-    private let roomList = RoomList(
-        body: [
-            .init(
-                roomId: 0,
-                name: "",
-                type: "",
-                role: "",
-                sticky: true,
-                unreadNum: 0,
-                mentionNum: 0,
-                mytaskNum: 0,
-                messageNum: 0,
-                fileNum: 0,
-                taskNum: 0,
-                iconPath: "",
-                lastUpdateTime: 0
-            )
-        ]
-    )
 }
