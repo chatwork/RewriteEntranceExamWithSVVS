@@ -11,7 +11,8 @@ import Foundation
 final class ChatworkAPITokenStore {
     static let shared: ChatworkAPITokenStore = .init()
     
-    // TODO: load()と関連づけたコンピューテッドプロパティの方がいいんじゃない？
+    // load()と関連づけたコンピューテッドプロパティの方がいいんじゃない？
+    // → .sink出来なくなるからやっぱりこのままがよさそう
     @Published private(set) var value: ChatworkAPIToken?
     
     init() {

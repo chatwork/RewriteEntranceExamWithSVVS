@@ -70,7 +70,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("所属 :")
                                 .font(.caption2)
                             Text("\(me.department)")
@@ -80,7 +80,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("役職 :")
                                 .font(.caption2)
                             Text("\(me.title)")
@@ -90,7 +90,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("URL :")
                                 .font(.caption2)
                             Text("\(me.url)")
@@ -100,7 +100,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("メールアドレス :")
                                 .font(.caption2)
                             Text("\(me.mail)")
@@ -110,7 +110,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("電話番号(勤務先) :")
                                 .font(.caption2)
                             Text("\(me.telOrganization)")
@@ -120,7 +120,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("電話番号(内線) :")
                                 .font(.caption2)
                             Text("\(me.telExtension)")
@@ -130,7 +130,7 @@ struct AccountInfoView: View {
                     }
                     
                     HStack {
-                        VStack(alignment: .leading)  {
+                        VStack(alignment: .leading) {
                             Text("電話番号(携帯) :")
                                 .font(.caption2)
                             Text("\(me.telMobile)")

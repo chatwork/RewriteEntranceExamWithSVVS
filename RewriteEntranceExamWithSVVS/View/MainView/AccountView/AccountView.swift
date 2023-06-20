@@ -13,7 +13,7 @@ struct AccountView: View {
     var body: some View {
         VStack {
             if state.me != nil {
-                AccountInfoView(me: state.me!)
+                AccountInfoView(me: state.me!) // swiftlint:disable:this force_unwrapping
             }
             
             // ログアウトボタン
@@ -30,6 +30,13 @@ struct AccountView: View {
             Button("キャンセル", role: .cancel) {}
             Button("ログアウト", role: .destructive) {
                 state.onTapAlertLogoutButton()
+            }
+        }
+        .alert("情報の取得に失敗しました", isPresented: $state.failedFetchMeFlag) {
+            Button("再取得") {
+                Task {
+                    await state.fetchMe()
+                }
             }
         }
     }

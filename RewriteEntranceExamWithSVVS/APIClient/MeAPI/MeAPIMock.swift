@@ -33,6 +33,7 @@ struct MeAPIMock: MeAPIProtocol {
         case throwFailedToDecodeModel
     }
     
+    // 返す仮データ
     private let me = Me(
         accountId: 0,
         roomId: 0,

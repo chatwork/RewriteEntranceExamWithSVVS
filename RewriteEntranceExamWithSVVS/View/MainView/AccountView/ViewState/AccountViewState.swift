@@ -13,6 +13,7 @@ final class AccountViewState: ObservableObject {
     private var cancellables: Set<AnyCancellable> = []
     
     @Published var logoutAlertFlag = false
+    @Published var failedFetchMeFlag = false
     @Published private(set) var me: Me?
     
     init() {
@@ -37,11 +38,11 @@ final class AccountViewState: ObservableObject {
     
     // 自動ログインで入ってきた時にfetchMe()をしないとMeの情報が未取得になっている
     func fetchMe() async {
-        let token = ChatworkAPITokenStore.shared.value!
+        let token = ChatworkAPITokenStore.shared.value! // swiftlint:disable:this force_unwrapping
         do {
             try await MeStore.shared.fetch(token: token)
         } catch {
-            // TODO: 例外処理
+            self.failedFetchMeFlag = true
         }
     }
 }
