@@ -26,7 +26,18 @@ import Foundation
 final class MessagesStore {
     static let shared: MessagesStore = .init()
     
+    private var roomMessageAPI: RoomMessageAPIProtocol = RoomMessageAPI()
+    
     func sendMessage(token: ChatworkAPIToken, roomId: Int, message: String) async throws {
-        try await _ = RoomMessageAPI().put(token: token, roomId: roomId, body: message)
+        try await _ = roomMessageAPI.put(token: token, roomId: roomId, body: message)
     }
 }
+
+#if TEST
+// ユニットテスト用のメソッド
+extension MessagesStore {
+    func injectionRoomMessageAPIMock(mock: RoomMessageAPIProtocol) {
+        meAPI = mock
+    }
+}
+#endif
