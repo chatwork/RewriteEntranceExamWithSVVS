@@ -21,6 +21,7 @@ final class MeStore {
     }
 }
 
+#if TEST
 // ユニットテスト用のメソッド
 extension MeStore {
     // プロパティを初期状態にする
@@ -33,3 +34,4 @@ extension MeStore {
         meAPI = mock
     }
 }
+#endif

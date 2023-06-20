@@ -21,6 +21,7 @@ final class RoomListStore {
     }
 }
 
+#if TEST
 // ユニットテスト用のメソッド
 extension RoomListStore {
     func setUpForUnitTest() {
@@ -32,3 +33,4 @@ extension RoomListStore {
         roomListAPI = mock
     }
 }
+#endif

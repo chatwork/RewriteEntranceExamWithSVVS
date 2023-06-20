@@ -425,8 +425,8 @@
 		67D7BD4A2A32EEB1002F684A /* RoomListStore */ = {
 			isa = PBXGroup;
 			children = (
-				67D7BD4B2A32EEE0002F684A /* Model */,
 				673B2F892A36A04000B934A6 /* RoomListStore.swift */,
+				67D7BD4B2A32EEE0002F684A /* Model */,
 			);
 			path = RoomListStore;
 			sourceTree = "<group>";
