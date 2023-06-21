@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import ChatworkAPI
 
 struct RoomView: View {
     // ルーム一覧画面から渡される
@@ -17,7 +16,6 @@ struct RoomView: View {
     init(roomId: Int) {
         self.roomId = roomId
         self._state = .init(wrappedValue: RoomViewState(roomId: roomId))
-        TestPackage().test()
     }
     
     var body: some View {

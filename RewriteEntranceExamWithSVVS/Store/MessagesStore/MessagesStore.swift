@@ -37,7 +37,7 @@ final class MessagesStore {
 // ユニットテスト用のメソッド
 extension MessagesStore {
     func injectionRoomMessageAPIMock(mock: RoomMessageAPIProtocol) {
-        meAPI = mock
+        roomMessageAPI = mock
     }
 }
 #endif
