@@ -7,30 +7,30 @@
 
 import Foundation
 
-protocol MeAPIProtocol {
+public protocol MeAPIProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse
 }
 
-struct MeGetResponse: Decodable {
-    let accountId: Int
-    let roomId: Int
-    let name: String
-    let chatworkId: String
-    let organizationId: Int
-    let organizationName: String
-    let department: String
-    let title: String
-    let url: String
-    let introduction: String
-    let mail: String
-    let telOrganization: String
-    let telExtension: String
-    let telMobile: String
-    let skype: String
-    let facebook: String
-    let twitter: String
-    let avatarImageUrl: String
-    let loginMail: String
+public struct MeGetResponse: Decodable {
+    public let accountId: Int
+    public let roomId: Int
+    public let name: String
+    public let chatworkId: String
+    public let organizationId: Int
+    public let organizationName: String
+    public let department: String
+    public let title: String
+    public let url: String
+    public let introduction: String
+    public let mail: String
+    public let telOrganization: String
+    public let telExtension: String
+    public let telMobile: String
+    public let skype: String
+    public let facebook: String
+    public let twitter: String
+    public let avatarImageUrl: String
+    public let loginMail: String
     
     enum CodingKeys: String, CodingKey {
         case accountId = "account_id"

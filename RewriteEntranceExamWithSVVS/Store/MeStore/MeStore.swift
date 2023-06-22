@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 @MainActor
 final class MeStore {

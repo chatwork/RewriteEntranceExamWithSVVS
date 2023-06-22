@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 struct Me {
     let accountId: Int

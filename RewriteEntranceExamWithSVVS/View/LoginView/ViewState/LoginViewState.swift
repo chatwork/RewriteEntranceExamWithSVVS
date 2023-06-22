@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 import UIKit
+import ChatworkAPI
 
 @MainActor
 final class LoginViewState: ObservableObject {

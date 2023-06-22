@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 struct RoomListAPI: RoomListAPIProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> RoomList {

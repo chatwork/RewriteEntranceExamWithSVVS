@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct MeAPI: MeAPIProtocol {
+public struct MeAPI: MeAPIProtocol {
+    public init() {}
     // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
-    func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
+    public func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
         let url = ChatworkAPIEndpoint.getMeEndpoint
         var request = URLRequest(url: url)
         

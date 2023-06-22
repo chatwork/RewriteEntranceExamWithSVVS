@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct ChatworkAPIToken: Codable, Equatable {
-    let value: String
+public struct ChatworkAPIToken: Codable, Equatable {
+    public let value: String
     
-    init(value: String) throws {
+    public init(value: String) throws {
         if isSingleByteAlphanumericCharacters(value: value) == false {
             throw ValueObjectError.invalidValue
         }
@@ -22,7 +22,7 @@ struct ChatworkAPIToken: Codable, Equatable {
         }
     }
     
-    static func == (lhs: ChatworkAPIToken, rhs: ChatworkAPIToken) -> Bool {
+    public static func == (lhs: ChatworkAPIToken, rhs: ChatworkAPIToken) -> Bool {
         return lhs.value == rhs.value
     }
 }

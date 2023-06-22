@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 struct ChatworkAPITokenManager {
     private let key = "ChatworkAPIToken"

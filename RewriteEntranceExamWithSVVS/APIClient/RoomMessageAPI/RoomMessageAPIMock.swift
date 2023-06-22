@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 enum RoomMessageAPIMock: RoomMessageAPIProtocol {
     case successFetch

@@ -8,7 +8,7 @@
 import Foundation
 
 // リポジトリ共通で使うHTTPのメソッド(必要になったらメソッドは生やす)
-enum HTTPMethod: String {
+public enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
 }

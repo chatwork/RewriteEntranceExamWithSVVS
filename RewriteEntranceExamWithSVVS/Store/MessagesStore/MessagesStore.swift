@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ChatworkAPI
 
 /*
     Messagesというデータは存在しないが、メッセージ送信の際にViewStateからAPIへリクエストを送ることに違和感を感じ、作成しました
