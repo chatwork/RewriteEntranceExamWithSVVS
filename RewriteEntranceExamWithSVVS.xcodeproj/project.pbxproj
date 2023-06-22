@@ -40,7 +40,6 @@
 		673B2F992A36E0C600B934A6 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F982A36E0C600B934A6 /* RoomView.swift */; };
 		673B2F9C2A36E22000B934A6 /* RoomViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F9B2A36E22000B934A6 /* RoomViewState.swift */; };
 		673B2F9E2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */; };
-		677391D62A4274BE004A77E9 /* ChatworkAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 677391D52A4274BE004A77E9 /* ChatworkAPI */; };
 		677391D82A427711004A77E9 /* RoomMessageAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */; };
 		677391D92A427714004A77E9 /* RoomMessageAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */; };
 		677CFDBB2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */; };
@@ -138,7 +137,6 @@
 		673B2F982A36E0C600B934A6 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		673B2F9B2A36E22000B934A6 /* RoomViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewState.swift; sourceTree = "<group>"; };
 		673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageRepositoryTests.swift; sourceTree = "<group>"; };
-		677391D72A4275FF004A77E9 /* ChatworkAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ChatworkAPI; path = ../MultiModuleTest/ChatworkAPI; sourceTree = "<group>"; };
 		677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenRepositoryTests.swift; sourceTree = "<group>"; };
 		677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStoreTests.swift; sourceTree = "<group>"; };
 		677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStore.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				677391D62A4274BE004A77E9 /* ChatworkAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +204,6 @@
 		67233F6F2A2DAFFF005FDF36 = {
 			isa = PBXGroup;
 			children = (
-				677391D72A4275FF004A77E9 /* ChatworkAPI */,
 				67233F7A2A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS */,
 				67233F912A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests */,
 				67233F9B2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests */,
@@ -237,6 +233,7 @@
 				67F86E4A2A31619600F16733 /* View */,
 				6799FD342A3154AC000FF866 /* Store */,
 				6793FEF62A2FFEE1005EDD9D /* APIClient */,
+				67F86E6D2A31A5A600F16733 /* ChatworkAPITokenManager */,
 				67F86E622A319BC400F16733 /* ValueObject */,
 				67233F892A2DB002005FDF36 /* Info.plist */,
 				673B2F7E2A3696D700B934A6 /* APIKey.plist */,
@@ -396,7 +393,6 @@
 			children = (
 				6793FEFA2A301811005EDD9D /* Common */,
 				6799FD2B2A314AC7000FF866 /* MeAPI */,
-				67F86E6D2A31A5A600F16733 /* ChatworkAPITokenManager */,
 				67D7BD512A3307A6002F684A /* RoomListAPI */,
 				6723F1F92A37DEDD0094FEB8 /* RoomMessageAPI */,
 			);
@@ -577,7 +573,6 @@
 			);
 			name = RewriteEntranceExamWithSVVS;
 			packageProductDependencies = (
-				677391D52A4274BE004A77E9 /* ChatworkAPI */,
 			);
 			productName = RewriteEntranceExamWithSVVS;
 			productReference = 67233F782A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS.app */;
@@ -1259,13 +1254,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		677391D52A4274BE004A77E9 /* ChatworkAPI */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = ChatworkAPI;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67233F702A2DAFFF005FDF36 /* Project object */;
 }
