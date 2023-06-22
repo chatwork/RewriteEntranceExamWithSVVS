@@ -7,8 +7,7 @@
 
 import Foundation
 
-// GlobalStateであるMeをDecodableに準拠させるのは責務的に大丈夫なのだろうか？と心配している
-struct Me: Decodable {
+struct Me {
     let accountId: Int
     let roomId: Int
     let name: String
@@ -29,25 +28,27 @@ struct Me: Decodable {
     let avatarImageUrl: String
     let loginMail: String
     
-    enum CodingKeys: String, CodingKey {
-        case accountId = "account_id"
-        case roomId = "room_id"
-        case name = "name"
-        case chatworkId = "chatwork_id"
-        case organizationId = "organization_id"
-        case organizationName = "organization_name"
-        case department = "department"
-        case title = "title"
-        case url = "url"
-        case introduction = "introduction"
-        case mail = "mail"
-        case telOrganization = "tel_organization"
-        case telExtension = "tel_extension"
-        case telMobile = "tel_mobile"
-        case skype = "skype"
-        case facebook = "facebook"
-        case twitter = "twitter"
-        case avatarImageUrl = "avatar_image_url"
-        case loginMail = "login_mail"
+    static func comvert(from: MeGetResponse) -> Me {
+        Me(
+            accountId: from.accountId,
+            roomId: from.roomId,
+            name: from.name,
+            chatworkId: from.chatworkId,
+            organizationId: from.organizationId,
+            organizationName: from.organizationName,
+            department: from.department,
+            title: from.title,
+            url: from.url,
+            introduction: from.introduction,
+            mail: from.mail,
+            telOrganization: from.telOrganization,
+            telExtension: from.telExtension,
+            telMobile: from.telMobile,
+            skype: from.skype,
+            facebook: from.facebook,
+            twitter: from.twitter,
+            avatarImageUrl: from.avatarImageUrl,
+            loginMail: from.loginMail
+        )
     }
 }

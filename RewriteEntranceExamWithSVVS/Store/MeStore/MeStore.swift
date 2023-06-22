@@ -17,7 +17,7 @@ final class MeStore {
     
     func fetch(token: ChatworkAPIToken) async throws {
         let fetchResult = try await meAPI.fetch(token: token)
-        value = fetchResult
+        value = Me.comvert(from: fetchResult)
     }
 }
 

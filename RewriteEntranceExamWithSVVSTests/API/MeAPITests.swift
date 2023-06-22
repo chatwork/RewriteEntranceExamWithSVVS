@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import RewriteEntranceExamWithSVVS
 
 final class MeAPITests: XCTestCase {
     let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
@@ -15,7 +16,7 @@ final class MeAPITests: XCTestCase {
         let api = MeAPI()
         let result = try await api.fetch(token: ChatworkAPIToken(value: token))
         
-        XCTAssertTrue(result is Me) // 常にtrueだけど、テストの意図を伝えるための記述
+        XCTAssertTrue(result is MeGetResponse) // 常にtrueだけど、テストの意図を伝えるための記述
     }
     
     func test_ChatworkAPIへ間違ったTokenでリクエストをすると例外が返ってくること() async throws {

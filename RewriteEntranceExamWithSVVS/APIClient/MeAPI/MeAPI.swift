@@ -9,7 +9,7 @@ import Foundation
 
 struct MeAPI: MeAPIProtocol {
     // tokenは間違った引数を渡すのを防ぐために値オブジェクトに変更する余地はある
-    func fetch(token: ChatworkAPIToken) async throws -> Me {
+    func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
         let url = ChatworkAPIEndpoint.getMeEndpoint
         var request = URLRequest(url: url)
         
@@ -34,7 +34,7 @@ struct MeAPI: MeAPIProtocol {
         
         // デコードする
         do {
-            let decodeResult = try JSONDecoder().decode(Me.self, from: data)
+            let decodeResult = try JSONDecoder().decode(MeGetResponse.self, from: data)
             return decodeResult
         } catch {
             throw APIError.failedToDecodeModel

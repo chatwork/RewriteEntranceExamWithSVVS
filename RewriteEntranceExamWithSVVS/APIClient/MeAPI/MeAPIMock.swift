@@ -12,7 +12,7 @@ enum MeAPIMock: MeAPIProtocol {
     case throwStatusCodeIsNot200
     case throwFailedToDecodeModel
     
-    func fetch(token: ChatworkAPIToken) async throws -> Me {
+    func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
         try? await Task.sleep(nanoseconds: 1_000_000_000)
         switch self {
         case .successFetch:
@@ -25,8 +25,8 @@ enum MeAPIMock: MeAPIProtocol {
     }
     
     // 返す仮データ
-    private var me: Me {
-        Me(
+    private var me: MeGetResponse {
+        MeGetResponse(
             accountId: 0,
             roomId: 0,
             name: "Test User",
