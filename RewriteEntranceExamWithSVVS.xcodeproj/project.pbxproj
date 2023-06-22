@@ -106,6 +106,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		670152DB2A44182B003213D1 /* ChatworkAPI */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChatworkAPI; sourceTree = SOURCE_ROOT; };
 		6719637D2A3AB62E00BCA4A2 /* MessagesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStore.swift; sourceTree = "<group>"; };
 		67233F782A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewriteEntranceExamWithSVVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67233F7B2A2DAFFF005FDF36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 		67233F6F2A2DAFFF005FDF36 = {
 			isa = PBXGroup;
 			children = (
+				670152DB2A44182B003213D1 /* ChatworkAPI */,
 				67233F7A2A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS */,
 				67233F912A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests */,
 				67233F9B2A2DB002005FDF36 /* RewriteEntranceExamWithSVVSUITests */,
