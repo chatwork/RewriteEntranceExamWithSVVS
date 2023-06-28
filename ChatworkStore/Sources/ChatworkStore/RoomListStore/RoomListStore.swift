@@ -9,21 +9,20 @@ import Foundation
 import ChatworkAPI
 
 @MainActor
-final class RoomListStore {
-    static let shared: RoomListStore = .init()
+public final class RoomListStore {
+    public static let shared: RoomListStore = .init()
     
-    @Published private(set) var value: RoomList?
+    @Published public private(set) var value: RoomList?
     
     private var roomListAPI: RoomListAPIProtocol = RoomListAPI()
     
-    func fetch(token: ChatworkAPIToken) async throws {
+    public func fetch(token: ChatworkAPIToken) async throws {
         let fetchResult = try await roomListAPI.fetch(token: token)
         value = RoomList.comvert(from: fetchResult)
     }
 }
 
-#if TEST
-// ユニットテスト用のメソッド
+// ユニットテスト用のメソッド(internalで収まる)
 extension RoomListStore {
     func setUpForUnitTest() {
         value = nil
@@ -34,4 +33,3 @@ extension RoomListStore {
         roomListAPI = mock
     }
 }
-#endif

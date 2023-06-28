@@ -5,7 +5,9 @@
 //  Created by cw-ryu.nakayama on 2023/06/09.
 //
 
+import ChatworkAPI
 import XCTest
+@testable import ChatworkStore
 
 @MainActor
 final class ChatworkAPITokenStoreTests: XCTestCase {

@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum MeAPIMock: MeAPIProtocol {
+public enum MeAPIMock: MeAPIProtocol {
     case successFetch
     case throwStatusCodeIsNot200
     case throwFailedToDecodeModel
     
-    func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
+    public func fetch(token: ChatworkAPIToken) async throws -> MeGetResponse {
         try? await Task.sleep(nanoseconds: 1_000_000_000)
         switch self {
         case .successFetch:

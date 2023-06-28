@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		670152DD2A441ACE003213D1 /* ChatworkAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 670152DC2A441ACE003213D1 /* ChatworkAPI */; };
-		6719637E2A3AB62E00BCA4A2 /* MessagesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6719637D2A3AB62E00BCA4A2 /* MessagesStore.swift */; };
 		67233F7C2A2DAFFF005FDF36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F7B2A2DAFFF005FDF36 /* AppDelegate.swift */; };
 		67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F7D2A2DAFFF005FDF36 /* SceneDelegate.swift */; };
 		67233F802A2DAFFF005FDF36 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67233F7F2A2DAFFF005FDF36 /* LoginViewController.swift */; };
@@ -23,25 +22,13 @@
 		6723F2082A383F340094FEB8 /* MainViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6723F2072A383F340094FEB8 /* MainViewState.swift */; };
 		6723F2092A384C9C0094FEB8 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F802A36971400B934A6 /* KeyManager.swift */; };
 		672D2E112A3AFBB900AA3778 /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672D2E102A3AFBB900AA3778 /* AccountInfoView.swift */; };
-		673B2F7F2A3696D700B934A6 /* APIKey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 673B2F7E2A3696D700B934A6 /* APIKey.plist */; };
 		673B2F812A36971400B934A6 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F802A36971400B934A6 /* KeyManager.swift */; };
-		673B2F882A369EF700B934A6 /* RoomListStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F872A369EF700B934A6 /* RoomListStoreTests.swift */; };
-		673B2F8A2A36A04000B934A6 /* RoomListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F892A36A04000B934A6 /* RoomListStore.swift */; };
-		673B2F8B2A36A06400B934A6 /* RoomListStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F892A36A04000B934A6 /* RoomListStore.swift */; };
 		673B2F912A36A42600B934A6 /* RoomListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F902A36A42600B934A6 /* RoomListViewState.swift */; };
 		673B2F952A36BD4700B934A6 /* RoomListViewStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F942A36BD4700B934A6 /* RoomListViewStateTests.swift */; };
 		673B2F962A36BDAB00B934A6 /* RoomListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F902A36A42600B934A6 /* RoomListViewState.swift */; };
 		673B2F992A36E0C600B934A6 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F982A36E0C600B934A6 /* RoomView.swift */; };
 		673B2F9C2A36E22000B934A6 /* RoomViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F9B2A36E22000B934A6 /* RoomViewState.swift */; };
 		677CFDBB2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */; };
-		677CFDBC2A32A0EA004B7195 /* ChatworkAPITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E6E2A31B4B300F16733 /* ChatworkAPITokenManager.swift */; };
-		677CFDBE2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */; };
-		677CFDC02A32AAFD004B7195 /* ChatworkAPITokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */; };
-		677CFDC42A32ABB9004B7195 /* ChatworkAPITokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */; };
-		6799FD322A314F74000FF866 /* MeStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6799FD312A314F74000FF866 /* MeStoreTests.swift */; };
-		67D5AC192A41934000F78D37 /* MessagesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */; };
-		67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
-		67D7BD502A32F514002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
 		67DCA9AE2A4C04B500DC23C0 /* ChatworkStore in Frameworks */ = {isa = PBXBuildFile; productRef = 67DCA9AD2A4C04B500DC23C0 /* ChatworkStore */; };
 		67F86E4C2A3161A800F16733 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4B2A3161A800F16733 /* LoginView.swift */; };
 		67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4E2A31724700F16733 /* InputTokenField.swift */; };
@@ -52,7 +39,6 @@
 		67F86E5E2A3182B500F16733 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E5D2A3182B500F16733 /* MainViewController.swift */; };
 		67F86E602A31831F00F16733 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E5F2A31831F00F16733 /* RoomListView.swift */; };
 		67F86E672A319E4B00F16733 /* ChatworkAPITokenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E662A319E4B00F16733 /* ChatworkAPITokenTests.swift */; };
-		67F86E6F2A31B4B300F16733 /* ChatworkAPITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E6E2A31B4B300F16733 /* ChatworkAPITokenManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +60,6 @@
 
 /* Begin PBXFileReference section */
 		670152DB2A44182B003213D1 /* ChatworkAPI */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChatworkAPI; sourceTree = SOURCE_ROOT; };
-		6719637D2A3AB62E00BCA4A2 /* MessagesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStore.swift; sourceTree = "<group>"; };
 		67233F782A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RewriteEntranceExamWithSVVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67233F7B2A2DAFFF005FDF36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67233F7D2A2DAFFF005FDF36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,20 +77,12 @@
 		6723F2042A37F8460094FEB8 /* AccountViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewState.swift; sourceTree = "<group>"; };
 		6723F2072A383F340094FEB8 /* MainViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewState.swift; sourceTree = "<group>"; };
 		672D2E102A3AFBB900AA3778 /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
-		673B2F7E2A3696D700B934A6 /* APIKey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKey.plist; sourceTree = "<group>"; };
 		673B2F802A36971400B934A6 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
-		673B2F872A369EF700B934A6 /* RoomListStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListStoreTests.swift; sourceTree = "<group>"; };
-		673B2F892A36A04000B934A6 /* RoomListStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListStore.swift; sourceTree = "<group>"; };
 		673B2F902A36A42600B934A6 /* RoomListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewState.swift; sourceTree = "<group>"; };
 		673B2F942A36BD4700B934A6 /* RoomListViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewStateTests.swift; sourceTree = "<group>"; };
 		673B2F982A36E0C600B934A6 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		673B2F9B2A36E22000B934A6 /* RoomViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewState.swift; sourceTree = "<group>"; };
 		677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenRepositoryTests.swift; sourceTree = "<group>"; };
-		677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStoreTests.swift; sourceTree = "<group>"; };
-		677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStore.swift; sourceTree = "<group>"; };
-		6799FD312A314F74000FF866 /* MeStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStoreTests.swift; sourceTree = "<group>"; };
-		67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStoreTests.swift; sourceTree = "<group>"; };
-		67D7BD4C2A32EF08002F684A /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
 		67DCA9AC2A4C041900DC23C0 /* ChatworkStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ChatworkStore; sourceTree = "<group>"; };
 		67F86E4B2A3161A800F16733 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		67F86E4E2A31724700F16733 /* InputTokenField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTokenField.swift; sourceTree = "<group>"; };
@@ -115,7 +92,6 @@
 		67F86E5D2A3182B500F16733 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		67F86E5F2A31831F00F16733 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		67F86E662A319E4B00F16733 /* ChatworkAPITokenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenTests.swift; sourceTree = "<group>"; };
-		67F86E6E2A31B4B300F16733 /* ChatworkAPITokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,14 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6719637C2A3AB61F00BCA4A2 /* MessagesStore */ = {
-			isa = PBXGroup;
-			children = (
-				6719637D2A3AB62E00BCA4A2 /* MessagesStore.swift */,
-			);
-			path = MessagesStore;
-			sourceTree = "<group>";
-		};
 		67233F6F2A2DAFFF005FDF36 = {
 			isa = PBXGroup;
 			children = (
@@ -185,10 +153,7 @@
 				67233F842A2DB002005FDF36 /* Assets.xcassets */,
 				67233F862A2DB002005FDF36 /* LaunchScreen.storyboard */,
 				67F86E4A2A31619600F16733 /* View */,
-				6799FD342A3154AC000FF866 /* Store */,
-				67F86E6D2A31A5A600F16733 /* ChatworkAPITokenManager */,
 				67233F892A2DB002005FDF36 /* Info.plist */,
-				673B2F7E2A3696D700B934A6 /* APIKey.plist */,
 			);
 			path = RewriteEntranceExamWithSVVS;
 			sourceTree = "<group>";
@@ -197,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				67F86E592A317E2700F16733 /* ViewState */,
-				6799FD302A314F44000FF866 /* Store */,
 				6793FEF22A2FFAD9005EDD9D /* API */,
 				67F86E652A319E2E00F16733 /* ValueObject */,
 				673B2F802A36971400B934A6 /* KeyManager.swift */,
@@ -285,58 +249,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		677CFDC22A32AB12004B7195 /* ChatworkAPITokenStore */ = {
-			isa = PBXGroup;
-			children = (
-				677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */,
-			);
-			path = ChatworkAPITokenStore;
-			sourceTree = "<group>";
-		};
 		6793FEF22A2FFAD9005EDD9D /* API */ = {
 			isa = PBXGroup;
 			children = (
 				677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		6799FD302A314F44000FF866 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				6799FD312A314F74000FF866 /* MeStoreTests.swift */,
-				677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */,
-				673B2F872A369EF700B934A6 /* RoomListStoreTests.swift */,
-				67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
-		6799FD342A3154AC000FF866 /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				6719637C2A3AB61F00BCA4A2 /* MessagesStore */,
-				677CFDC22A32AB12004B7195 /* ChatworkAPITokenStore */,
-				67D7BD4A2A32EEB1002F684A /* RoomListStore */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
-		67D7BD4A2A32EEB1002F684A /* RoomListStore */ = {
-			isa = PBXGroup;
-			children = (
-				673B2F892A36A04000B934A6 /* RoomListStore.swift */,
-				67D7BD4B2A32EEE0002F684A /* Model */,
-			);
-			path = RoomListStore;
-			sourceTree = "<group>";
-		};
-		67D7BD4B2A32EEE0002F684A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				67D7BD4C2A32EF08002F684A /* RoomList.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		67F86E4A2A31619600F16733 /* View */ = {
@@ -400,14 +318,6 @@
 				67F86E662A319E4B00F16733 /* ChatworkAPITokenTests.swift */,
 			);
 			path = ValueObject;
-			sourceTree = "<group>";
-		};
-		67F86E6D2A31A5A600F16733 /* ChatworkAPITokenManager */ = {
-			isa = PBXGroup;
-			children = (
-				67F86E6E2A31B4B300F16733 /* ChatworkAPITokenManager.swift */,
-			);
-			path = ChatworkAPITokenManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -520,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				67233F882A2DB002005FDF36 /* LaunchScreen.storyboard in Resources */,
-				673B2F7F2A3696D700B934A6 /* APIKey.plist in Resources */,
 				67233F852A2DB002005FDF36 /* Assets.xcassets in Resources */,
 				67233F832A2DAFFF005FDF36 /* Main.storyboard in Resources */,
 			);
@@ -569,7 +478,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6723F2082A383F340094FEB8 /* MainViewState.swift in Sources */,
-				67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */,
 				673B2F992A36E0C600B934A6 /* RoomView.swift in Sources */,
 				67233F802A2DAFFF005FDF36 /* LoginViewController.swift in Sources */,
 				6723F1FF2A37F0EF0094FEB8 /* MainView.swift in Sources */,
@@ -579,18 +487,14 @@
 				67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */,
 				67F86E522A3173F500F16733 /* LoginViewState.swift in Sources */,
 				67F86E602A31831F00F16733 /* RoomListView.swift in Sources */,
-				673B2F8A2A36A04000B934A6 /* RoomListStore.swift in Sources */,
 				67F86E542A3175E100F16733 /* LoginButton.swift in Sources */,
 				67233F7C2A2DAFFF005FDF36 /* AppDelegate.swift in Sources */,
 				6723F2022A37F3F10094FEB8 /* AccountView.swift in Sources */,
 				6723F2092A384C9C0094FEB8 /* KeyManager.swift in Sources */,
 				6723F2052A37F8460094FEB8 /* AccountViewState.swift in Sources */,
-				677CFDC02A32AAFD004B7195 /* ChatworkAPITokenStore.swift in Sources */,
 				673B2F9C2A36E22000B934A6 /* RoomViewState.swift in Sources */,
-				6719637E2A3AB62E00BCA4A2 /* MessagesStore.swift in Sources */,
 				67233F7E2A2DAFFF005FDF36 /* SceneDelegate.swift in Sources */,
 				67F86E5E2A3182B500F16733 /* MainViewController.swift in Sources */,
-				67F86E6F2A31B4B300F16733 /* ChatworkAPITokenManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,20 +502,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				673B2F882A369EF700B934A6 /* RoomListStoreTests.swift in Sources */,
 				67F86E582A317E2300F16733 /* LoginViewStateTests.swift in Sources */,
 				677CFDBB2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift in Sources */,
 				67F86E672A319E4B00F16733 /* ChatworkAPITokenTests.swift in Sources */,
 				67F86E5A2A317F4000F16733 /* LoginViewState.swift in Sources */,
 				673B2F812A36971400B934A6 /* KeyManager.swift in Sources */,
-				67D5AC192A41934000F78D37 /* MessagesStoreTests.swift in Sources */,
-				677CFDC42A32ABB9004B7195 /* ChatworkAPITokenStore.swift in Sources */,
-				677CFDBC2A32A0EA004B7195 /* ChatworkAPITokenManager.swift in Sources */,
-				67D7BD502A32F514002F684A /* RoomList.swift in Sources */,
-				673B2F8B2A36A06400B934A6 /* RoomListStore.swift in Sources */,
 				673B2F952A36BD4700B934A6 /* RoomListViewStateTests.swift in Sources */,
-				6799FD322A314F74000FF866 /* MeStoreTests.swift in Sources */,
-				677CFDBE2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift in Sources */,
 				673B2F962A36BDAB00B934A6 /* RoomListViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

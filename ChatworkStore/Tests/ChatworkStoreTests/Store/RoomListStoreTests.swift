@@ -5,11 +5,13 @@
 //  Created by cw-ryu.nakayama on 2023/06/12.
 //
 
+import ChatworkAPI
 import XCTest
+@testable import ChatworkStore
 
 @MainActor
 final class RoomListStoreTests: XCTestCase {
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
 
     func test_RoomListStoreからAPIを経由してルーム一覧の情報を取得できる() async throws {
         // RoomListStoreのAPIをMockに差し替え

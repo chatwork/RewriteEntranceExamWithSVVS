@@ -22,8 +22,7 @@ public final class MeStore {
     }
 }
 
-#if TEST
-// ユニットテスト用のメソッド
+// ユニットテスト用のメソッド(internalで収まる)
 extension MeStore {
     // プロパティを初期状態にする
     func setUpForUnitTest() {
@@ -35,4 +34,3 @@ extension MeStore {
         meAPI = mock
     }
 }
-#endif

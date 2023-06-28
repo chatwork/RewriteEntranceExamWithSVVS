@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum RoomListAPIMock: RoomListAPIProtocol {
+public enum RoomListAPIMock: RoomListAPIProtocol {
     case successFetch
     case throwStatusCodeIsNot200
     case throwFailedToDecodeModel
     
-    func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse {
+    public func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse {
         try? await Task.sleep(nanoseconds: 1_000_000_00)
         switch self {
         case.successFetch:

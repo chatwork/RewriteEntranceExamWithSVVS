@@ -5,7 +5,9 @@
 //  Created by cw-ryu.nakayama on 2023/06/08.
 //
 
+import ChatworkAPI
 import XCTest
+@testable import ChatworkStore
 
 @MainActor
 final class MeStoreTests: XCTestCase {
@@ -15,7 +17,7 @@ final class MeStoreTests: XCTestCase {
         MeStore.shared.setUpForUnitTest()
     }
     
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
     
     func test_MeStoreからAPIを経由してMeの情報を取得できる() async throws {
         // MeStoreのAPIをMockに差し替え

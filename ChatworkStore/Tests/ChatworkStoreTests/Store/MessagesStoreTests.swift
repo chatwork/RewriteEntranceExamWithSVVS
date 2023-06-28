@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import ChatworkStore
 
 /*
  MessagesStoreは現状、RoomMessageAPIをラップしてるだけなので
@@ -13,6 +14,6 @@ import XCTest
  ということで、現状は書かない
  */
 final class MessagesStoreTests: XCTestCase {
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
 
 }

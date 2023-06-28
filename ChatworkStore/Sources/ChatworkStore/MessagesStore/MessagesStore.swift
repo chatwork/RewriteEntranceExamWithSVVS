@@ -5,8 +5,8 @@
 //  Created by cw-ryu.nakayama on 2023/06/15.
 //
 
-import Foundation
 import ChatworkAPI
+import Foundation
 
 /*
     Messagesというデータは存在しないが、メッセージ送信の際にViewStateからAPIへリクエストを送ることに違和感を感じ、作成しました
@@ -24,21 +24,19 @@ import ChatworkAPI
     です。ですが、この「想定できる」はYAGNIの原則に反しているのではないかという感覚もあります。
  */
 @MainActor
-final class MessagesStore {
-    static let shared: MessagesStore = .init()
+public final class MessagesStore {
+    public static let shared: MessagesStore = .init()
     
     private var roomMessageAPI: RoomMessageAPIProtocol = RoomMessageAPI()
     
-    func sendMessage(token: ChatworkAPIToken, roomId: Int, message: String) async throws {
+    public func sendMessage(token: ChatworkAPIToken, roomId: Int, message: String) async throws {
         try await _ = roomMessageAPI.put(token: token, roomId: roomId, body: message)
     }
 }
 
-#if TEST
-// ユニットテスト用のメソッド
+// ユニットテスト用のメソッド(internalで収まる)
 extension MessagesStore {
     func injectionRoomMessageAPIMock(mock: RoomMessageAPIProtocol) {
         roomMessageAPI = mock
     }
 }
-#endif
