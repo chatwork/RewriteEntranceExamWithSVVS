@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ChatworkAPI
 
 enum RoomListAPIMock: RoomListAPIProtocol {
     case successFetch

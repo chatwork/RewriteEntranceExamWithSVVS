@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ChatworkAPI
 
 public protocol RoomMessageAPIProtocol {
     func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String

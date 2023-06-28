@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ChatworkAPI
 
 public struct RoomMessageAPI: RoomMessageAPIProtocol {
     public init() {}

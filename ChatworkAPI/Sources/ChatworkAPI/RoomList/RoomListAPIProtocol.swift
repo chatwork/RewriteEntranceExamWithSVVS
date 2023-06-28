@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import ChatworkAPI
 
 public protocol RoomListAPIProtocol {
     func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse
