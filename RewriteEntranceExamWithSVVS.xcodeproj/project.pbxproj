@@ -34,7 +34,6 @@
 		673B2F962A36BDAB00B934A6 /* RoomListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F902A36A42600B934A6 /* RoomListViewState.swift */; };
 		673B2F992A36E0C600B934A6 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F982A36E0C600B934A6 /* RoomView.swift */; };
 		673B2F9C2A36E22000B934A6 /* RoomViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F9B2A36E22000B934A6 /* RoomViewState.swift */; };
-		673B2F9E2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */; };
 		677CFDBB2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */; };
 		677CFDBC2A32A0EA004B7195 /* ChatworkAPITokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E6E2A31B4B300F16733 /* ChatworkAPITokenManager.swift */; };
 		677CFDBE2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */; };
@@ -105,7 +104,6 @@
 		673B2F942A36BD4700B934A6 /* RoomListViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewStateTests.swift; sourceTree = "<group>"; };
 		673B2F982A36E0C600B934A6 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
 		673B2F9B2A36E22000B934A6 /* RoomViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewState.swift; sourceTree = "<group>"; };
-		673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageRepositoryTests.swift; sourceTree = "<group>"; };
 		677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenRepositoryTests.swift; sourceTree = "<group>"; };
 		677CFDBD2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStoreTests.swift; sourceTree = "<group>"; };
 		677CFDBF2A32AAFD004B7195 /* ChatworkAPITokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatworkAPITokenStore.swift; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */,
-				673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -635,7 +632,6 @@
 				673B2F8B2A36A06400B934A6 /* RoomListStore.swift in Sources */,
 				6799FD372A31552F000FF866 /* MeStore.swift in Sources */,
 				673B2F952A36BD4700B934A6 /* RoomListViewStateTests.swift in Sources */,
-				673B2F9E2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift in Sources */,
 				6793FEF52A2FFCFE005EDD9D /* Me.swift in Sources */,
 				6799FD322A314F74000FF866 /* MeStoreTests.swift in Sources */,
 				677CFDBE2A32A646004B7195 /* ChatworkAPITokenStoreTests.swift in Sources */,

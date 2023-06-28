@@ -6,11 +6,11 @@
 //
 
 import XCTest
-import ChatworkAPI
+@testable import ChatworkAPI
 
 @MainActor
 final class RoomMessageAPITests: XCTestCase {
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
     
     func test_メッセージが送られ_message_idがStringで帰ってくる() async throws {
         let api = RoomMessageAPI()
