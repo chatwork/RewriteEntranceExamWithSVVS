@@ -111,6 +111,7 @@
 		6799FD352A3154C6000FF866 /* MeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeStore.swift; sourceTree = "<group>"; };
 		67D5AC182A41934000F78D37 /* MessagesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStoreTests.swift; sourceTree = "<group>"; };
 		67D7BD4C2A32EF08002F684A /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
+		67DCA9AC2A4C041900DC23C0 /* ChatworkStore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ChatworkStore; sourceTree = "<group>"; };
 		67F86E4B2A3161A800F16733 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		67F86E4E2A31724700F16733 /* InputTokenField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTokenField.swift; sourceTree = "<group>"; };
 		67F86E512A3173F500F16733 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 		67233F6F2A2DAFFF005FDF36 = {
 			isa = PBXGroup;
 			children = (
+				67DCA9AC2A4C041900DC23C0 /* ChatworkStore */,
 				670152DB2A44182B003213D1 /* ChatworkAPI */,
 				67233F7A2A2DAFFF005FDF36 /* RewriteEntranceExamWithSVVS */,
 				67233F912A2DB002005FDF36 /* RewriteEntranceExamWithSVVSTests */,
