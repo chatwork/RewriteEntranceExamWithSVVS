@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 import UIKit
+import ChatworkStore
 import ChatworkAPI
 
 @MainActor

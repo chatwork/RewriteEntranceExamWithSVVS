@@ -9,14 +9,14 @@ import Foundation
 import ChatworkAPI
 
 @MainActor
-final class MeStore {
-    static let shared: MeStore = .init()
+public final class MeStore {
+    public static let shared: MeStore = .init()
     
-    @Published private(set) var value: Me?
+    @Published public private(set) var value: Me?
     
     private var meAPI: MeAPIProtocol = MeAPI()
     
-    func fetch(token: ChatworkAPIToken) async throws {
+    public func fetch(token: ChatworkAPIToken) async throws {
         let fetchResult = try await meAPI.fetch(token: token)
         value = Me.comvert(from: fetchResult)
     }

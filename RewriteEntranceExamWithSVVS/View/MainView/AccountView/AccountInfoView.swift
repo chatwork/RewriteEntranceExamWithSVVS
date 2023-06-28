@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ChatworkStore
 
 struct AccountInfoView: View {
     private let me: Me
