@@ -52,7 +52,6 @@
 		67D5AC1B2A41935D00F78D37 /* RoomMessageAPIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */; };
 		67D5AC1D2A41939900F78D37 /* RoomMessageAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */; };
 		67D7BD4D2A32EF08002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
-		67D7BD4F2A32F28B002F684A /* RoomListRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */; };
 		67D7BD502A32F514002F684A /* RoomList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D7BD4C2A32EF08002F684A /* RoomList.swift */; };
 		67F86E4C2A3161A800F16733 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4B2A3161A800F16733 /* LoginView.swift */; };
 		67F86E4F2A31724700F16733 /* InputTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86E4E2A31724700F16733 /* InputTokenField.swift */; };
@@ -123,7 +122,6 @@
 		67D5AC1A2A41935D00F78D37 /* RoomMessageAPIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageAPIProtocol.swift; sourceTree = "<group>"; };
 		67D5AC1C2A41939900F78D37 /* RoomMessageAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMessageAPIMock.swift; sourceTree = "<group>"; };
 		67D7BD4C2A32EF08002F684A /* RoomList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomList.swift; sourceTree = "<group>"; };
-		67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListRepositoryTests.swift; sourceTree = "<group>"; };
 		67F86E4B2A3161A800F16733 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		67F86E4E2A31724700F16733 /* InputTokenField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTokenField.swift; sourceTree = "<group>"; };
 		67F86E512A3173F500F16733 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
@@ -340,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				677CFDBA2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift */,
-				67D7BD4E2A32F28B002F684A /* RoomListRepositoryTests.swift */,
 				673B2F9D2A36EF0B00B934A6 /* RoomMessageRepositoryTests.swift */,
 			);
 			path = API;
@@ -656,7 +653,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67D7BD4F2A32F28B002F684A /* RoomListRepositoryTests.swift in Sources */,
 				673B2F882A369EF700B934A6 /* RoomListStoreTests.swift in Sources */,
 				67F86E582A317E2300F16733 /* LoginViewStateTests.swift in Sources */,
 				677CFDBB2A32A05A004B7195 /* ChatworkAPITokenRepositoryTests.swift in Sources */,

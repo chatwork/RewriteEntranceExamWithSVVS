@@ -6,15 +6,15 @@
 //
 
 import XCTest
+@testable import ChatworkAPI
 
 final class RoomListAPITests: XCTestCase {
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
 
     func test_ChatworkAPIへ正しいTokenでリクエストをするとRoomList型のモデルが返ってくること() async throws {
         let api = RoomListAPI()
         let result = try await api.fetch(token: ChatworkAPIToken(value: token))
 
-        XCTAssertTrue(result is RoomList)
+        XCTAssertTrue(result is RoomListGetResponse)
     }
-
 }
