@@ -8,8 +8,10 @@
 import Foundation
 import ChatworkAPI
 
-struct RoomMessageAPI: RoomMessageAPIProtocol {
-    func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String {
+public struct RoomMessageAPI: RoomMessageAPIProtocol {
+    public init() {}
+    
+    public func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String {
         let url = ChatworkAPIEndpoint.getRoomMessageEndpoint(roomId: roomId)
         var request = URLRequest(url: url)
 

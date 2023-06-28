@@ -8,6 +8,6 @@
 import Foundation
 import ChatworkAPI
 
-protocol RoomMessageAPIProtocol {
+public protocol RoomMessageAPIProtocol {
     func put(token: ChatworkAPIToken, roomId: Int, body: String) async throws -> String
 }
