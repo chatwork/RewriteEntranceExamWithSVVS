@@ -8,6 +8,6 @@
 import Foundation
 import ChatworkAPI
 
-protocol RoomListAPIProtocol {
-    func fetch(token: ChatworkAPIToken) async throws -> RoomList
+public protocol RoomListAPIProtocol {
+    func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse
 }

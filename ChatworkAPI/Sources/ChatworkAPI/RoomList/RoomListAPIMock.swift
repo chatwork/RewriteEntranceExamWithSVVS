@@ -13,7 +13,7 @@ enum RoomListAPIMock: RoomListAPIProtocol {
     case throwStatusCodeIsNot200
     case throwFailedToDecodeModel
     
-    func fetch(token: ChatworkAPIToken) async throws -> RoomList {
+    func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse {
         try? await Task.sleep(nanoseconds: 1_000_000_00)
         switch self {
         case.successFetch:
@@ -25,8 +25,8 @@ enum RoomListAPIMock: RoomListAPIProtocol {
         }
     }
     
-    private var roomList: RoomList {
-        RoomList(
+    private var roomList: RoomListGetResponse {
+        RoomListGetResponse (
             body: [
                 .init(
                     roomId: 0,

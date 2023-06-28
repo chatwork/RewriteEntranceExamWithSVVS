@@ -18,7 +18,7 @@ final class RoomListStore {
     
     func fetch(token: ChatworkAPIToken) async throws {
         let fetchResult = try await roomListAPI.fetch(token: token)
-        value = fetchResult
+        value = RoomList.comvert(from: fetchResult)
     }
 }
 

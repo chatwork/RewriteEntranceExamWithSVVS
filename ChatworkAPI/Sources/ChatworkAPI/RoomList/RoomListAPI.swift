@@ -8,8 +8,10 @@
 import Foundation
 import ChatworkAPI
 
-struct RoomListAPI: RoomListAPIProtocol {
-    func fetch(token: ChatworkAPIToken) async throws -> RoomList {
+public struct RoomListAPI: RoomListAPIProtocol {
+    public init() {}
+    
+    public func fetch(token: ChatworkAPIToken) async throws -> RoomListGetResponse {
         let url = ChatworkAPIEndpoint.getRoomsEndpoint
         var request = URLRequest(url: url)
         
@@ -32,8 +34,8 @@ struct RoomListAPI: RoomListAPIProtocol {
         
         // デコードする
         do {
-            let decodeResult = try JSONDecoder().decode([RoomList.RoomObject].self, from: data)
-            let roomListObject = RoomList(body: decodeResult)
+            let decodeResult = try JSONDecoder().decode([RoomListGetResponse.RoomObject].self, from: data)
+            let roomListObject = RoomListGetResponse(body: decodeResult)
             return roomListObject
         } catch {
             throw APIError.failedToDecodeModel

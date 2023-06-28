@@ -5,12 +5,13 @@
 //  Created by cw-ryu.nakayama on 2023/06/09.
 //
 
+import ChatworkAPI
 import Foundation
 
 struct RoomList {
     let body: [RoomObject]
     
-    struct RoomObject: Decodable {
+    struct RoomObject {
         let roomId: Int
         let name: String
         let type: String
@@ -25,20 +26,30 @@ struct RoomList {
         let iconPath: String
         let lastUpdateTime: Int
         
-        enum CodingKeys: String, CodingKey {
-            case roomId = "room_id"
-            case name = "name"
-            case type = "type"
-            case role = "role"
-            case sticky = "sticky"
-            case unreadNum = "unread_num"
-            case mentionNum = "mention_num"
-            case mytaskNum = "mytask_num"
-            case messageNum = "message_num"
-            case fileNum = "file_num"
-            case taskNum = "task_num"
-            case iconPath = "icon_path"
-            case lastUpdateTime = "last_update_time"
+        static func comvert(from: RoomListGetResponse.RoomObject) -> RoomObject {
+            RoomObject(
+                roomId: from.roomId,
+                name: from.name,
+                type: from.type,
+                role: from.role,
+                sticky: from.sticky,
+                unreadNum: from.unreadNum,
+                mentionNum: from.mentionNum,
+                mytaskNum: from.mytaskNum,
+                messageNum: from.messageNum,
+                fileNum: from.fileNum,
+                taskNum: from.taskNum,
+                iconPath: from.iconPath,
+                lastUpdateTime: from.lastUpdateTime
+            )
         }
+    }
+    
+    static func comvert(from: RoomListGetResponse) -> RoomList {
+        RoomList(
+            body: from.body.map({ room in
+                RoomObject.comvert(from: room)
+            })
+        )
     }
 }
