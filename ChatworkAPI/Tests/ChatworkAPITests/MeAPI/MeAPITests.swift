@@ -1,15 +1,15 @@
 //
 //  MeAPITests.swift
-//  RewriteEntranceExamWithSVVSTests
+//  
 //
-//  Created by cw-ryu.nakayama on 2023/06/07.
+//  Created by cw-ryu.nakayama on 2023/06/28.
 //
 
 import XCTest
-@testable import RewriteEntranceExamWithSVVS
+@testable import ChatworkAPI
 
 final class MeAPITests: XCTestCase {
-    let token = KeyManager().getValue(key: "ChatworkAPIToken") as! String
+    let token = testAPIToken
     
     // Meの返ってくることを確認できればOKとする
     func test_ChatworkAPIへ正しいTokenでリクエストをするとMe型のモデルが返ってくること() async throws {
@@ -28,4 +28,5 @@ final class MeAPITests: XCTestCase {
             // catchに入れば成功のためPass
         }
     }
+
 }
